@@ -14,10 +14,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
+
+import org.apache.commons.io.IOUtils;
 
 /**
  * @ClassName: ApplicationConfigHelper.java
@@ -64,6 +67,8 @@ public class ApplicationConfigHelper
 		File file = new File(configFilePath);
 
 		InputStream is = null;
+		
+		InputStreamReader isr = null;
 
 		Properties pro = new Properties();
 
@@ -71,8 +76,10 @@ public class ApplicationConfigHelper
 		{
 
 			is = new FileInputStream(file);
+			
+			isr = new InputStreamReader(is, "UTF-8");
 
-			pro.load(is);
+			pro.load(isr);
 
 			Enumeration<?> e = pro.propertyNames();
 
@@ -96,15 +103,8 @@ public class ApplicationConfigHelper
 		} 
 		finally 
 		{
-			try 
-			{
-				is.close();
-			} 
-			catch (IOException e) 
-			{
-
-				e.printStackTrace();
-			}
+			IOUtils.closeQuietly(isr);
+			IOUtils.closeQuietly(is);
 		}
 	}
 

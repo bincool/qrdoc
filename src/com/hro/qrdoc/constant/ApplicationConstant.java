@@ -42,13 +42,23 @@ public interface ApplicationConstant
 	Map<String, String> APP_CONFIGS = ApplicationConfigHelper.getInstance().getPropMap();
 	
 	/**
+	 * Frame标题.
+	 */
+	String FRAME_TITLE = APP_CONFIGS.get("frame.title");
+	
+	/**
 	 * Frame图标路径.
 	 */
 	String FRAME_ICON_PATH = APP_CONFIGS.get("frame.icon.path");
 	
 	/**
-	 * Frame标题.
+	 * 取消显示图标路径.
 	 */
-	String FRAME_TITLE = APP_CONFIGS.get("frame.title");
+	String FRAME_CANCEL_SHOW_PATH = APP_CONFIGS.get("frame.cancel.show.path");
+	
+	/**
+	 * 取消隐藏图标路径.
+	 */
+	String FRAME_CANCEL_HIDE_PATH = APP_CONFIGS.get("frame.cancel.hide.path");
 	
 }

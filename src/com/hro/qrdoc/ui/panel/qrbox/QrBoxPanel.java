@@ -17,6 +17,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
+import com.hro.qrdoc.action.base.BaseAction;
 import com.hro.qrdoc.constant.ApplicationConstant;
 import com.hro.qrdoc.ui.panel.base.DefaultInputPanel;
 
@@ -97,11 +98,13 @@ public class QrBoxPanel extends JPanel
 		// 下一箱按钮.
 		JButton nextBtn = new JButton(ApplicationConstant.BUTTON_TITLE_NEXTBTN);
 		nextBtn.setBounds(300, 525, 80, 30);
+		nextBtn.addActionListener(new BaseAction());
 		this.add(nextBtn);
 		
 		// 结束按钮.
 		JButton finishBtn = new JButton(ApplicationConstant.BUTTON_TITLE_FINISHBTN);
 		finishBtn.setBounds(390, 525, 80, 30);
+		finishBtn.addActionListener(new BaseAction());
 		this.add(finishBtn);
 	}
 

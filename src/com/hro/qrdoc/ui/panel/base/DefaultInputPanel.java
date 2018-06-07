@@ -21,6 +21,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import com.hro.qrdoc.action.base.BaseAction;
 import com.hro.qrdoc.action.listener.DefaultInputMouseAdapter;
 import com.hro.qrdoc.constant.ApplicationConstant;
 
@@ -132,6 +133,7 @@ public class DefaultInputPanel extends JPanel
 		cancelBtn.setBorderPainted(false);
 		cancelBtn.setContentAreaFilled(false);
 		cancelBtn.setFocusPainted(false);
+		cancelBtn.addActionListener(new BaseAction());
 		
 		this.setLayout(null);
 		this.add(inputText);

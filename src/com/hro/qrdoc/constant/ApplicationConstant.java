@@ -91,4 +91,9 @@ public interface ApplicationConstant
 	 */
 	String BUTTON_TITLE_FINISHBTN = APP_CONFIGS.get("button.title.finishbtn");
 	
+	/**
+	 * 警告提示：action功能未开放警告.
+	 */
+	String WARN_ACTION_FUN_NOTOPEN = APP_CONFIGS.get("warn.action.fun.notopen");
+	
 }

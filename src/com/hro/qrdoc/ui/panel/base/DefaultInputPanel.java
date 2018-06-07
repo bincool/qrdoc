@@ -14,6 +14,7 @@ import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
@@ -21,8 +22,9 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import com.hro.qrdoc.action.base.BaseAction;
+import com.hro.qrdoc.action.listener.CancelBtnMouseAdapter;
 import com.hro.qrdoc.action.listener.DefaultInputMouseAdapter;
+import com.hro.qrdoc.action.qrbox.CancelBtnAction;
 import com.hro.qrdoc.constant.ApplicationConstant;
 
 /**
@@ -58,7 +60,7 @@ public class DefaultInputPanel extends JPanel
 	private Color normalColor = Color.LIGHT_GRAY;
 	
 	/**
-	 * 边框颜色.
+	 * 输入框边框颜色.
 	 */
 	private Color borderColor = Color.LIGHT_GRAY;
 	
@@ -73,16 +75,27 @@ public class DefaultInputPanel extends JPanel
 	private JTextField inputText = new JTextField();
 	
 	/**
+	 * 输入框默认宽.
+	 */
+	private int width = 153;
+	
+	/**
+	 * 输入框默认高.
+	 */
+	private int height = 17;
+	
+	/**
 	 * 取消按钮.
 	 */
-	private JButton cancelBtn = new JButton(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ApplicationConstant.FRAME_CANCEL_SHOW_PATH)));
+	private JButton cancelBtn = new JButton(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ApplicationConstant.FRAME_CANCEL_HIDE_PATH)));
 	
 	/**
 	 * 无参构造函数.
 	 */
 	public DefaultInputPanel() 
 	{
-		initialContext();
+		initLayout();
+		initAction();
 	}
 	
 	/**
@@ -94,7 +107,8 @@ public class DefaultInputPanel extends JPanel
 	{
 		this.normalColor = normalColor;
 		this.borderColor = borderColor;
-		initialContext();
+		initLayout();
+		initAction();
 	}
 
 	/**
@@ -118,26 +132,64 @@ public class DefaultInputPanel extends JPanel
 	}
 	
 	/**
-	 * 初始化输入框，可以被子类继承.
+	 * 初始化输入框布局，可以被子类继承.
 	 */
-	protected void initialContext() 
+	protected void initLayout() 
 	{
-		inputText.setBounds(7, 0, 153, 30);
+		this.setLayout(null);
+		
+		// 输入框布局.
+		inputText.setBounds(7, 0, width, 13 + height);
 		inputText.setOpaque(false);
 		inputText.setBorder(null);
-		DefaultInputMouseAdapter countListener = new DefaultInputMouseAdapter(this);
-		inputText.addMouseListener(countListener);
+		this.add(inputText);
 		
-		cancelBtn.setBounds(160, 0, 30, 30);
+		// 取消重置按钮布局.
+		cancelBtn.setBounds(7 + width, 0, 30, 13 + height);
 		cancelBtn.setBorder(null);
 		cancelBtn.setBorderPainted(false);
 		cancelBtn.setContentAreaFilled(false);
 		cancelBtn.setFocusPainted(false);
-		cancelBtn.addActionListener(new BaseAction());
-		
-		this.setLayout(null);
-		this.add(inputText);
         this.add(cancelBtn);
+	}
+	
+	/**
+	 * 初始化输入框事件，可以被子类继承.
+	 */
+	protected void initAction() 
+	{
+		// 输入框鼠标事件.
+		DefaultInputMouseAdapter countListener = new DefaultInputMouseAdapter(this);
+		inputText.addMouseListener(countListener);
+		
+		// 取消重置按钮事件.
+		cancelBtn.addActionListener(new CancelBtnAction());
+		CancelBtnMouseAdapter cancelBtnListener = new CancelBtnMouseAdapter(cancelBtn);
+		cancelBtn.addMouseListener(cancelBtnListener);
+	}
+	
+	/* (non-Javadoc)
+	 * @see java.awt.Component#setBounds(int, int, int, int)
+	 */
+	@Override
+	public void setBounds(int x, int y, int width, int height) 
+	{
+		super.setBounds(x, y, width, height);
+		this.width = width - 37;
+		this.height = height - 13;
+		initLayout();
+	}
+
+	/* (non-Javadoc)
+	 * @see java.awt.Component#setBounds(java.awt.Rectangle)
+	 */
+	@Override
+	public void setBounds(Rectangle r) 
+	{
+		super.setBounds(r);
+		this.width = width - 37;
+		this.height = height - 13;
+		initLayout();
 	}
 
 	/* (non-Javadoc)
@@ -155,10 +207,10 @@ public class DefaultInputPanel extends JPanel
 		
 		// 画一个外层矩形.
 		g2.setColor(Color.white);
-		g2.fillRoundRect(0, 0, 190, 30, 10, 10);
+		g2.fillRoundRect(0, 0, 37 + width, 13 + height, 10, 10);
 		
 		// 画一个内层矩形,用于放置JText.
-		g2.fillRect(0, 0, 190, 17);
+		g2.fillRect(0, 0, 37 + width, height);
 		
 		// 边框.
 		BasicStroke basicStroke = new BasicStroke(1.0f);
@@ -175,14 +227,14 @@ public class DefaultInputPanel extends JPanel
 		}
 		
 		// 圆角矩形框.
-		g2.drawLine(0, 5, 0, 25);  
-        g2.drawLine(189, 5, 189, 25);  
-        g2.drawLine(5, 0, 185, 0);  
-        g2.drawLine(5, 29, 185, 29);
+		g2.drawLine(0, 5, 0, 8 + height);
+        g2.drawLine(36 + width, 5, 36 + width, 8 + height);
+        g2.drawLine(5, 0, 32 + width, 0);
+        g2.drawLine(5, 12 + height, 32 + width, 12 + height);
         g2.drawArc(0, 0, 10, 10, 180, -90);
-        g2.drawArc(179, 0, 10, 10, 90, -90);
-        g2.drawArc(0, 18, 10, 10, 180, 90);
-        g2.drawArc(179, 18, 10, 10, 270, 90);
+        g2.drawArc(26 + width, 0, 10, 10, 90, -90);
+        g2.drawArc(0, 1 + height, 10, 10, 180, 90);
+        g2.drawArc(26 + width, 1 + height, 10, 10, 270, 90);
 	}
 	
 }

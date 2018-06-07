@@ -65,25 +65,25 @@ public class QrBoxPanel extends JPanel
 		
 		// 计数输入框.
 		JLabel countLabel = new JLabel(ApplicationConstant.LABEL_TITLE_COUNT);
-		countLabel.setBounds(25, 20, 70, 30);
+		countLabel.setBounds(25, 20, 70, 35);
 		DefaultInputPanel countPanel = new DefaultInputPanel(Color.LIGHT_GRAY, new Color(56, 172, 239));
-		countPanel.setBounds(80, 20, 190, 30);
+		countPanel.setBounds(80, 20, 300, 35);
 		this.add(countLabel);
 		this.add(countPanel);
 		
 		// 订单输入框.
 		JLabel orderNumLabel = new JLabel(ApplicationConstant.LABEL_TITLE_ORDERNUM);
-		orderNumLabel.setBounds(25, 60, 70, 30);
+		orderNumLabel.setBounds(25, 60, 70, 35);
 		DefaultInputPanel orderNumPanel = new DefaultInputPanel(Color.LIGHT_GRAY, new Color(56, 172, 239));
-		orderNumPanel.setBounds(80, 60, 190, 30);
+		orderNumPanel.setBounds(80, 60, 300, 35);
 		this.add(orderNumLabel);
 		this.add(orderNumPanel);
 		
 		// 大箱码输入框.
 		JLabel bigBoxCodeLabel = new JLabel(ApplicationConstant.LABEL_TITLE_BIGBOXCODE);
-		bigBoxCodeLabel.setBounds(25, 100, 70, 30);
+		bigBoxCodeLabel.setBounds(25, 100, 70, 35);
 		DefaultInputPanel bigBoxCodePanel = new DefaultInputPanel(Color.LIGHT_GRAY, new Color(56, 172, 239));
-		bigBoxCodePanel.setBounds(80, 100, 190, 30);
+		bigBoxCodePanel.setBounds(80, 100, 300, 35);
 		this.add(bigBoxCodeLabel);
 		this.add(bigBoxCodePanel);
 		

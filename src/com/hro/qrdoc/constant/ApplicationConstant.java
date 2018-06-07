@@ -59,7 +59,7 @@ public interface ApplicationConstant
 	/**
 	 * 图标路径：取消隐藏图标路径.
 	 */
-	String FRAME_CANCEL_HIDE_PATH = APP_CONFIGS.get("image.cancel.show.path");
+	String FRAME_CANCEL_HIDE_PATH = APP_CONFIGS.get("image.cancel.hide.path");
 	
 	/**
 	 * label标题：每箱个数.

@@ -12,7 +12,14 @@ package com.hro.qrdoc.action.qrbox;
 
 import java.awt.event.ActionEvent;
 
+import javax.swing.JOptionPane;
+
 import com.hro.qrdoc.action.base.BaseAction;
+import com.hro.qrdoc.bean.qrbox.QrBoxPage;
+import com.hro.qrdoc.bean.qrbox.QrcodeBoxBean;
+import com.hro.qrdoc.constant.ApplicationConstant;
+import com.hro.qrdoc.constant.SysStatusAndType;
+import com.hro.qrdoc.utils.qrbox.QrBoxUtils;
 
 /**
 * @ClassName: FinishBtnAction.java
@@ -35,6 +42,25 @@ import com.hro.qrdoc.action.base.BaseAction;
 */
 public class FinishBtnAction extends BaseAction 
 {
+	
+	/**
+	 * 二维码装箱页面bean.
+	 */
+	private QrBoxPage qrBoxPage;
+	
+	/**
+	 * 二维码装箱bean.
+	 */
+	private QrcodeBoxBean qrcodeBoxBean;
+	
+	/**
+	 * 有参构造函数.
+	 * @param qrBoxPage
+	 */
+	public FinishBtnAction(QrBoxPage qrBoxPage) 
+	{
+		this.qrBoxPage = qrBoxPage;
+	}
 
 	/* (non-Javadoc)
 	 * @see com.hro.qrdoc.action.base.BaseAction#actionPerformed(java.awt.event.ActionEvent)
@@ -42,7 +68,18 @@ public class FinishBtnAction extends BaseAction
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
-		super.actionPerformed(e);
+		qrBoxPage.flushQrcodeBoxBean();
+		qrcodeBoxBean = qrBoxPage.getQrcodeBoxBean();
+		
+		String verifyResult = QrBoxUtils.verifyQrBoxPageParams(qrcodeBoxBean);
+		if (!SysStatusAndType.qrBoxPageParamsVerify.OK.equals(verifyResult)) 
+		{
+			JOptionPane.showMessageDialog(null, ApplicationConstant.APP_CONFIGS.get(verifyResult), ApplicationConstant.FRAME_TITLE, JOptionPane.WARNING_MESSAGE);
+		} 
+		else 
+		{
+			JOptionPane.showMessageDialog(null, ApplicationConstant.APP_CONFIGS.get(verifyResult), ApplicationConstant.FRAME_TITLE, JOptionPane.WARNING_MESSAGE);
+		}
 	}
 	
 }

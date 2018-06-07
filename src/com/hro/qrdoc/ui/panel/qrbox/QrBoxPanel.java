@@ -17,7 +17,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-import com.hro.qrdoc.action.base.BaseAction;
+import com.hro.qrdoc.action.qrbox.FinishBtnAction;
+import com.hro.qrdoc.action.qrbox.NextBtnAction;
+import com.hro.qrdoc.bean.qrbox.QrBoxPage;
 import com.hro.qrdoc.constant.ApplicationConstant;
 import com.hro.qrdoc.ui.panel.base.DefaultInputPanel;
 
@@ -89,6 +91,11 @@ public class QrBoxPanel extends JPanel
 	private JTextArea qrCodeText = new JTextArea();
 	
 	/**
+	 * 二维码装箱页面bean.
+	 */
+	private QrBoxPage qrBoxPage = new QrBoxPage();
+	
+	/**
 	 * 下一箱按钮.
 	 */
 	private JButton nextBtn = new JButton(ApplicationConstant.BUTTON_TITLE_NEXTBTN);
@@ -104,6 +111,47 @@ public class QrBoxPanel extends JPanel
 	public QrBoxPanel() 
 	{
 		initLayout();
+		initAction();
+	}
+	
+	/**
+	 * 获取countPanel.
+	 * @return
+	 *     countPanel.
+	 */
+	public DefaultInputPanel getCountPanel() 
+	{
+		return countPanel;
+	}
+	
+	/**
+	 * 获取orderNumPanel.
+	 * @return
+	 *     orderNumPanel.
+	 */
+	public DefaultInputPanel getOrderNumPanel() 
+	{
+		return orderNumPanel;
+	}
+	
+	/**
+	 * 获取bigBoxCodePanel.
+	 * @return
+	 *     bigBoxCodePanel.
+	 */
+	public DefaultInputPanel getBigBoxCodePanel() 
+	{
+		return bigBoxCodePanel;
+	}
+	
+	/**
+	 * 获取qrCodeText.
+	 * @return
+	 *     qrCodeText.
+	 */
+	public JTextArea getQrCodeText() 
+	{
+		return qrCodeText;
 	}
 	
 	/**
@@ -151,11 +199,16 @@ public class QrBoxPanel extends JPanel
 	 */
 	protected void initAction() 
 	{
+		qrBoxPage.setCountPanel(countPanel);
+		qrBoxPage.setOrderNumPanel(orderNumPanel);
+		qrBoxPage.setBigBoxCodePanel(bigBoxCodePanel);
+		qrBoxPage.setQrCodeText(qrCodeText);
+		
 		// 下一箱按钮.
-		nextBtn.addActionListener(new BaseAction());
+		nextBtn.addActionListener(new NextBtnAction(qrBoxPage));
 		
 		// 结束按钮.
-		finishBtn.addActionListener(new BaseAction());
+		finishBtn.addActionListener(new FinishBtnAction(qrBoxPage));
 	}
 	
 }

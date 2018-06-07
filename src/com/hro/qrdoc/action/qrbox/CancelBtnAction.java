@@ -66,7 +66,7 @@ public class CancelBtnAction extends BaseAction
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
-		LOGGER.info("输入框内容重置，被重置的数据：" + inputText.getText());
+		LOGGER.info("Input box contents reset, the data is : " + inputText.getText());
 		inputText.setText("");
 	}
 	

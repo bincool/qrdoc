@@ -47,7 +47,7 @@ public class QrcodeBoxBean implements Serializable
 	/**
 	 * 每箱个数.
 	 */
-	private int count;
+	private String count;
 	
 	/**
 	 * 订单编号.
@@ -89,7 +89,7 @@ public class QrcodeBoxBean implements Serializable
 	 * @return
 	 *     count.
 	 */
-	public int getCount() 
+	public String getCount() 
 	{
 		return count;
 	}
@@ -99,7 +99,7 @@ public class QrcodeBoxBean implements Serializable
 	 * @param
 	 *     count.
 	 */
-	public void setCount(int count) 
+	public void setCount(String count) 
 	{
 		this.count = count;
 	}

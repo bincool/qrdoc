@@ -2,7 +2,7 @@
 * @FileName: DefaultInputMouseAdapter.java
 * @Package: com.hro.qrdoc.action.listener
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: DefaultInputMouseAdapter.java: TODO 一句话描述文件的作用.
+* @Description: DefaultInputMouseAdapter.java: 输入框panel鼠标监听.
 * @Author wchy，技术交流(891946049).
 * @Date 2018年6月6日 下午4:42:46.
 * @Content: 新增.
@@ -20,13 +20,13 @@ import com.hro.qrdoc.ui.panel.base.DefaultInputPanel;
 * 
 * @Description: 
 * <p>
-* TODO 一句话对这个类进行描述.
+* 输入框pannel鼠标监听.
 * </p>
 * <p>
-* TODO 详细描述.
+* 详细描述.
 * </p>
 * <p>
-* TODO 示例代码.
+* 示例代码.
 * </p>
 *
 * @Author: wchy，技术交流(891946049).
@@ -37,8 +37,15 @@ import com.hro.qrdoc.ui.panel.base.DefaultInputPanel;
 public class DefaultInputMouseAdapter extends MouseAdapter 
 {
 	
+	/**
+	 * 输入框panel.
+	 */
 	private DefaultInputPanel inputPanel;
 	
+	/**
+	 * 有参构造函数.
+	 * @param inputPanel
+	 */
 	public DefaultInputMouseAdapter(DefaultInputPanel inputPanel) 
 	{
 		this.inputPanel = inputPanel;

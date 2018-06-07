@@ -49,63 +49,113 @@ public class QrBoxPanel extends JPanel
 	private static final long serialVersionUID = 1L;
 	
 	/**
+	 * 计数输入框提示标签.
+	 */
+	private JLabel countLabel = new JLabel(ApplicationConstant.LABEL_TITLE_COUNT);
+	
+	/**
+	 * 计数输入框.
+	 */
+	private DefaultInputPanel countPanel = new DefaultInputPanel(Color.LIGHT_GRAY, new Color(56, 172, 239));
+	
+	/**
+	 * 订单编号输入框提示标签.
+	 */
+	private JLabel orderNumLabel = new JLabel(ApplicationConstant.LABEL_TITLE_ORDERNUM);
+	
+	/**
+	 * 订单编号输入框.
+	 */
+	private DefaultInputPanel orderNumPanel = new DefaultInputPanel(Color.LIGHT_GRAY, new Color(56, 172, 239));
+	
+	/**
+	 * 大箱条码输入框.
+	 */
+	private JLabel bigBoxCodeLabel = new JLabel(ApplicationConstant.LABEL_TITLE_BIGBOXCODE);
+	
+	/**
+	 * 大箱条码输入框提示标签.
+	 */
+	private DefaultInputPanel bigBoxCodePanel = new DefaultInputPanel(Color.LIGHT_GRAY, new Color(56, 172, 239));
+	
+	/**
+	 * 装箱二维码文本域提示标签.
+	 */
+	private JLabel qrCodeTextLabel = new JLabel(ApplicationConstant.LABEL_TITLE_QRCODETEXT);
+	
+	/**
+	 * 装箱二维码文本域.
+	 */
+	private JTextArea qrCodeText = new JTextArea();
+	
+	/**
+	 * 下一箱按钮.
+	 */
+	private JButton nextBtn = new JButton(ApplicationConstant.BUTTON_TITLE_NEXTBTN);
+	
+	/**
+	 * 结束按钮.
+	 */
+	private JButton finishBtn = new JButton(ApplicationConstant.BUTTON_TITLE_FINISHBTN);
+	
+	/**
 	 * 无参构造函数.
 	 */
 	public QrBoxPanel() 
 	{
-		initialContext();
+		initLayout();
 	}
 	
 	/**
 	 * 初始化二维码装箱panel.
 	 */
-	private void initialContext() 
+	private void initLayout() 
 	{
 		this.setLayout(null);
 		
 		// 计数输入框.
-		JLabel countLabel = new JLabel(ApplicationConstant.LABEL_TITLE_COUNT);
 		countLabel.setBounds(25, 20, 70, 35);
-		DefaultInputPanel countPanel = new DefaultInputPanel(Color.LIGHT_GRAY, new Color(56, 172, 239));
 		countPanel.setBounds(80, 20, 300, 35);
 		this.add(countLabel);
 		this.add(countPanel);
 		
-		// 订单输入框.
-		JLabel orderNumLabel = new JLabel(ApplicationConstant.LABEL_TITLE_ORDERNUM);
+		// 订单号输入框.
 		orderNumLabel.setBounds(25, 60, 70, 35);
-		DefaultInputPanel orderNumPanel = new DefaultInputPanel(Color.LIGHT_GRAY, new Color(56, 172, 239));
 		orderNumPanel.setBounds(80, 60, 300, 35);
 		this.add(orderNumLabel);
 		this.add(orderNumPanel);
 		
 		// 大箱码输入框.
-		JLabel bigBoxCodeLabel = new JLabel(ApplicationConstant.LABEL_TITLE_BIGBOXCODE);
 		bigBoxCodeLabel.setBounds(25, 100, 70, 35);
-		DefaultInputPanel bigBoxCodePanel = new DefaultInputPanel(Color.LIGHT_GRAY, new Color(56, 172, 239));
 		bigBoxCodePanel.setBounds(80, 100, 300, 35);
 		this.add(bigBoxCodeLabel);
 		this.add(bigBoxCodePanel);
 		
 		// 二维码文本域.
-		JLabel qrCodeTextLabel = new JLabel(ApplicationConstant.LABEL_TITLE_QRCODETEXT) ;
 		qrCodeTextLabel.setBounds(25, 140, 745, 30);
-		JTextArea qrCodeText = new JTextArea();
 		qrCodeText.setBounds(25, 180, 745, 330);
 		this.add(qrCodeTextLabel);
 		this.add(qrCodeText);
 		
 		// 下一箱按钮.
-		JButton nextBtn = new JButton(ApplicationConstant.BUTTON_TITLE_NEXTBTN);
 		nextBtn.setBounds(300, 525, 80, 30);
-		nextBtn.addActionListener(new BaseAction());
 		this.add(nextBtn);
 		
 		// 结束按钮.
-		JButton finishBtn = new JButton(ApplicationConstant.BUTTON_TITLE_FINISHBTN);
 		finishBtn.setBounds(390, 525, 80, 30);
-		finishBtn.addActionListener(new BaseAction());
 		this.add(finishBtn);
 	}
 
+	/**
+	 * 初始化二维码装箱事件绑定.
+	 */
+	protected void initAction() 
+	{
+		// 下一箱按钮.
+		nextBtn.addActionListener(new BaseAction());
+		
+		// 结束按钮.
+		finishBtn.addActionListener(new BaseAction());
+	}
+	
 }

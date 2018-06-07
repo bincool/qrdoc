@@ -46,7 +46,7 @@ import com.hro.qrdoc.constant.ApplicationConstant;
 * @Date: 2018年6月6日 上午11:23:13.
 * 
 */
-public class DefaultInputPanel extends JPanel 
+public class DefaultInputPanel extends JPanel
 {
 
 	/**
@@ -154,7 +154,7 @@ public class DefaultInputPanel extends JPanel
 	}
 	
 	/**
-	 * 初始化输入框事件，可以被子类继承.
+	 * 初始化输入框事件绑定，可以被子类继承.
 	 */
 	protected void initAction() 
 	{
@@ -163,9 +163,28 @@ public class DefaultInputPanel extends JPanel
 		inputText.addMouseListener(countListener);
 		
 		// 取消重置按钮事件.
-		cancelBtn.addActionListener(new CancelBtnAction());
+		cancelBtn.addActionListener(new CancelBtnAction(inputText));
+		
+		// 取消重置按钮鼠标事件.
 		CancelBtnMouseAdapter cancelBtnListener = new CancelBtnMouseAdapter(cancelBtn);
 		cancelBtn.addMouseListener(cancelBtnListener);
+	}
+	
+	/**
+	 * 重置输入框内容.
+	 */
+	public void resetInputText() 
+	{
+		inputText.setText("");
+	}
+	
+	/**
+	 * 获取输入框的内容.
+	 * @return
+	 */
+	public String getInputValue() 
+	{
+		return inputText.getText();
 	}
 	
 	/* (non-Javadoc)

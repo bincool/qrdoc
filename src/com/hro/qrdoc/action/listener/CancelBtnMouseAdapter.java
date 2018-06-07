@@ -2,7 +2,7 @@
 * @FileName: CancelBtnMouseAdapter.java
 * @Package: com.hro.qrdoc.action.listener
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: CancelBtnMouseAdapter.java: TODO 一句话描述文件的作用.
+* @Description: CancelBtnMouseAdapter.java: 取消重置按钮鼠标事件.
 * @Author wchy，技术交流(891946049).
 * @Date 2018年6月7日 下午2:42:16.
 * @Content: 新增.
@@ -24,13 +24,13 @@ import com.hro.qrdoc.constant.ApplicationConstant;
 * 
 * @Description: 
 * <p>
-* TODO 一句话对这个类进行描述.
+* 取消重置按钮鼠标事件.
 * </p>
 * <p>
-* TODO 详细描述.
+* 详细描述.
 * </p>
 * <p>
-* TODO 示例代码.
+* 示例代码.
 * </p>
 *
 * @Author: wchy，技术交流(891946049).
@@ -47,17 +47,17 @@ public class CancelBtnMouseAdapter extends MouseAdapter
 	private JButton cancelBtn;
 	
 	/**
-	 * 
+	 * 默认图标.
 	 */
 	private ImageIcon defaultIcon = new ImageIcon(Toolkit.getDefaultToolkit().getImage(ApplicationConstant.FRAME_CANCEL_HIDE_PATH));
 	
 	/**
-	 * 
+	 * 取消图标.
 	 */
 	private ImageIcon cacelIcon = new ImageIcon(Toolkit.getDefaultToolkit().getImage(ApplicationConstant.FRAME_CANCEL_SHOW_PATH));
 	
 	/**
-	 * 
+	 * 有参构造函数.
 	 * @param cancelBtn
 	 */
 	public CancelBtnMouseAdapter(JButton cancelBtn) 

@@ -47,18 +47,48 @@ public interface ApplicationConstant
 	String FRAME_TITLE = APP_CONFIGS.get("frame.title");
 	
 	/**
-	 * Frame图标路径.
+	 * logo图标路径.
 	 */
 	String FRAME_ICON_PATH = APP_CONFIGS.get("frame.icon.path");
 	
 	/**
-	 * 取消显示图标路径.
+	 * 图标路径：取消显示图标路径.
 	 */
-	String FRAME_CANCEL_SHOW_PATH = APP_CONFIGS.get("frame.cancel.show.path");
+	String FRAME_CANCEL_SHOW_PATH = APP_CONFIGS.get("image.cancel.show.path");
 	
 	/**
-	 * 取消隐藏图标路径.
+	 * 图标路径：取消隐藏图标路径.
 	 */
-	String FRAME_CANCEL_HIDE_PATH = APP_CONFIGS.get("frame.cancel.hide.path");
+	String FRAME_CANCEL_HIDE_PATH = APP_CONFIGS.get("image.cancel.show.path");
+	
+	/**
+	 * label标题：每箱个数.
+	 */
+	String LABEL_TITLE_COUNT = APP_CONFIGS.get("label.title.count");
+	
+	/**
+	 * label标题：订单编号.
+	 */
+	String LABEL_TITLE_ORDERNUM = APP_CONFIGS.get("label.title.ordernum");
+	
+	/**
+	 * label标题：大箱条码.
+	 */
+	String LABEL_TITLE_BIGBOXCODE = APP_CONFIGS.get("label.title.bigboxcode");
+	
+	/**
+	 * label标题：装箱二维码：已装箱 {0} 箱 {0} 个.
+	 */
+	String LABEL_TITLE_QRCODETEXT = APP_CONFIGS.get("label.title.qrcodetext");
+	
+	/**
+	 * button标题：下一箱.
+	 */
+	String BUTTON_TITLE_NEXTBTN = APP_CONFIGS.get("button.title.nextbtn");
+	
+	/**
+	 * button标题：结束.
+	 */
+	String BUTTON_TITLE_FINISHBTN = APP_CONFIGS.get("button.title.finishbtn");
 	
 }

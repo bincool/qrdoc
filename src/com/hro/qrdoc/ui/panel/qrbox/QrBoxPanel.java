@@ -17,6 +17,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
+import com.hro.qrdoc.constant.ApplicationConstant;
 import com.hro.qrdoc.ui.panel.base.DefaultInputPanel;
 
 /**
@@ -62,7 +63,7 @@ public class QrBoxPanel extends JPanel
 		this.setLayout(null);
 		
 		// 计数输入框.
-		JLabel countLabel = new JLabel("每箱个数：");
+		JLabel countLabel = new JLabel(ApplicationConstant.LABEL_TITLE_COUNT);
 		countLabel.setBounds(25, 20, 70, 30);
 		DefaultInputPanel countPanel = new DefaultInputPanel(Color.LIGHT_GRAY, new Color(56, 172, 239));
 		countPanel.setBounds(80, 20, 190, 30);
@@ -70,7 +71,7 @@ public class QrBoxPanel extends JPanel
 		this.add(countPanel);
 		
 		// 订单输入框.
-		JLabel orderNumLabel = new JLabel("订单编号：");
+		JLabel orderNumLabel = new JLabel(ApplicationConstant.LABEL_TITLE_ORDERNUM);
 		orderNumLabel.setBounds(25, 60, 70, 30);
 		DefaultInputPanel orderNumPanel = new DefaultInputPanel(Color.LIGHT_GRAY, new Color(56, 172, 239));
 		orderNumPanel.setBounds(80, 60, 190, 30);
@@ -78,7 +79,7 @@ public class QrBoxPanel extends JPanel
 		this.add(orderNumPanel);
 		
 		// 大箱码输入框.
-		JLabel bigBoxCodeLabel = new JLabel("大箱条码：");
+		JLabel bigBoxCodeLabel = new JLabel(ApplicationConstant.LABEL_TITLE_BIGBOXCODE);
 		bigBoxCodeLabel.setBounds(25, 100, 70, 30);
 		DefaultInputPanel bigBoxCodePanel = new DefaultInputPanel(Color.LIGHT_GRAY, new Color(56, 172, 239));
 		bigBoxCodePanel.setBounds(80, 100, 190, 30);
@@ -86,7 +87,7 @@ public class QrBoxPanel extends JPanel
 		this.add(bigBoxCodePanel);
 		
 		// 二维码文本域.
-		JLabel qrCodeTextLabel = new JLabel("装箱二维码：已装箱 {0} 箱 {0} 个") ;
+		JLabel qrCodeTextLabel = new JLabel(ApplicationConstant.LABEL_TITLE_QRCODETEXT) ;
 		qrCodeTextLabel.setBounds(25, 140, 745, 30);
 		JTextArea qrCodeText = new JTextArea();
 		qrCodeText.setBounds(25, 180, 745, 330);
@@ -94,12 +95,12 @@ public class QrBoxPanel extends JPanel
 		this.add(qrCodeText);
 		
 		// 下一箱按钮.
-		JButton nextBtn = new JButton("下一箱");
+		JButton nextBtn = new JButton(ApplicationConstant.BUTTON_TITLE_NEXTBTN);
 		nextBtn.setBounds(300, 525, 80, 30);
 		this.add(nextBtn);
 		
 		// 结束按钮.
-		JButton finishBtn = new JButton("结束");
+		JButton finishBtn = new JButton(ApplicationConstant.BUTTON_TITLE_FINISHBTN);
 		finishBtn.setBounds(390, 525, 80, 30);
 		this.add(finishBtn);
 	}

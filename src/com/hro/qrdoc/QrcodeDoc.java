@@ -1,7 +1,7 @@
 /**
 * @FileName: QrcodeDoc.java
 * @Package: com.hro.qrdoc
-* @Copyright: 2018 io.github.bincool Inc. All Rights Reserved.
+* @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
 * @Description: QrcodeDoc.java: 二维码装箱文档生成.
 * @Author wchy，技术交流(891946049).
 * @Date 2018年6月1日 下午12:53:24.

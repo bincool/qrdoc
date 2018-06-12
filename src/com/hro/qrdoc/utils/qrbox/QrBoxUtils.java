@@ -42,29 +42,29 @@ public class QrBoxUtils
 		// 校验每箱个数.
 		if (StringUtils.isEmpty(qrcodeBoxBean.getCount())) 
 		{
-			return SysStatusAndType.qrBoxPageParamsVerify.ERR_COUNT;
+			return SysStatusAndType.QBPParamsVerify.ERR_COUNT;
 		}
 		
 		// 校验订单编号.
 		if (StringUtils.isEmpty(qrcodeBoxBean.getOrderNum())) 
 		{
 			
-			return SysStatusAndType.qrBoxPageParamsVerify.ERR_ORDERNUM;
+			return SysStatusAndType.QBPParamsVerify.ERR_ORDERNUM;
 		}
 		
 		// 校验大箱条码.
 		if (StringUtils.isEmpty(qrcodeBoxBean.getBigBoxCode())) 
 		{
-			return SysStatusAndType.qrBoxPageParamsVerify.ERR_BIGBOXCODE;
+			return SysStatusAndType.QBPParamsVerify.ERR_BIGBOXCODE;
 		}
 		
 		// 校验装箱二维码.
 		if (StringUtils.isEmpty(qrcodeBoxBean.getQrCodeText())) 
 		{
-			return SysStatusAndType.qrBoxPageParamsVerify.ERR_QRCODETEXT;
+			return SysStatusAndType.QBPParamsVerify.ERR_QRCODETEXT;
 		}
 		
-		return SysStatusAndType.qrBoxPageParamsVerify.OK;
+		return SysStatusAndType.QBPParamsVerify.OK;
 	}
 	
 	

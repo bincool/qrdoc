@@ -96,4 +96,19 @@ public interface ApplicationConstant
 	 */
 	String WARN_ACTION_FUN_NOTOPEN = APP_CONFIGS.get("warn.action.fun.notopen");
 	
+	/**
+	 * 订单号正则匹配key.
+	 */
+	String QRDOC_FILE_REGEX_KEY_ORDERNUM = APP_CONFIGS.get("qrdoc.file.regex.key.ordernum");
+	
+	/**
+	 * 大箱码正则匹配key.
+	 */
+	String QRDOC_FILE_REGEX_KEY_BIGBOXCODE = APP_CONFIGS.get("qrdoc.file.regex.key.bigboxcode");
+	
+	/**
+	 * 二维码数据正则匹配key.
+	 */
+	String QRDOC_FILE_REGEX_KEY_QRCODETEXT = APP_CONFIGS.get("qrdoc.file.regex.key.qrcodetext");
+	
 }

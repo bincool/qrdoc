@@ -35,7 +35,7 @@ public interface SysStatusAndType
 	/**
 	 * 二维码装箱页面bean校验结果.
 	 */
-	interface qrBoxPageParamsVerify 
+	interface QBPParamsVerify 
 	{
 		/**
 		 * 每箱个数错误.

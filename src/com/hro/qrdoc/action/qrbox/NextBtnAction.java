@@ -72,7 +72,7 @@ public class NextBtnAction extends BaseAction
 		qrcodeBoxBean = qrBoxPage.getQrcodeBoxBean();
 		
 		String verifyResult = QrBoxUtils.verifyQrBoxPageParams(qrcodeBoxBean);
-		if (!SysStatusAndType.qrBoxPageParamsVerify.OK.equals(verifyResult)) 
+		if (!SysStatusAndType.QBPParamsVerify.OK.equals(verifyResult)) 
 		{
 			JOptionPane.showMessageDialog(null, ApplicationConstant.APP_CONFIGS.get(verifyResult), ApplicationConstant.FRAME_TITLE, JOptionPane.WARNING_MESSAGE);
 		} 

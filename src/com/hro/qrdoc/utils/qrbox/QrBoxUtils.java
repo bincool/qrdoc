@@ -12,7 +12,8 @@ package com.hro.qrdoc.utils.qrbox;
 
 import com.hro.qrdoc.bean.qrbox.QrcodeBoxBean;
 import com.hro.qrdoc.constant.SysStatusAndType;
-import com.hro.qrdoc.utils.StringUtils;
+
+import io.github.bincool.utils.commons.StringUtils;
 
 /**
 * @ClassName: QrBoxUtils.java

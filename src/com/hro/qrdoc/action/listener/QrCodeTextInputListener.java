@@ -41,10 +41,21 @@ import com.hro.qrdoc.utils.qrbox.QrBoxUtils;
 public class QrCodeTextInputListener implements DocumentListener 
 {
 	
+	/**
+	 * 二维码输入文本域.
+	 */
 	private JTextArea qrCodeText;
 	
+	/**
+	 * 二维码装箱页面bean.
+	 */
 	private QrBoxPage qrBoxPage;
 	
+	/**
+	 * 构造函数.
+	 * @param qrCodeText
+	 * @param qrBoxPage
+	 */
 	public QrCodeTextInputListener(JTextArea qrCodeText, QrBoxPage qrBoxPage) 
 	{
 		this.qrCodeText = qrCodeText;
@@ -66,7 +77,6 @@ public class QrCodeTextInputListener implements DocumentListener
 				return;
 			}
 		} 
-		
 	}
 
 	@Override

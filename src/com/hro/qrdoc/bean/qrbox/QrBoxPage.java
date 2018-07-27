@@ -43,25 +43,6 @@ import io.github.bincool.utils.MakeRandCode;
 * @Date: 2018年6月7日 下午4:44:30.
 * 
 */
-/**
-* @ClassName: QrBoxPage.java
-* 
-* @Description: 
-* <p>
-* 一句话对这个类进行描述.
-* </p>
-* <p>
-* 详细描述.
-* </p>
-* <p>
-* 示例代码.
-* </p>
-*
-* @Author: wchy，技术交流(891946049).
-* 
-* @Date: 2018年6月7日 下午4:49:04.
-* 
-*/
 public class QrBoxPage implements Serializable
 {
 	

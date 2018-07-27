@@ -15,8 +15,11 @@ import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
+import com.hro.qrdoc.action.listener.CountInputListener;
+import com.hro.qrdoc.action.listener.QrCodeTextInputListener;
 import com.hro.qrdoc.action.qrbox.FinishBtnAction;
 import com.hro.qrdoc.action.qrbox.NextBtnAction;
 import com.hro.qrdoc.bean.qrbox.QrBoxPage;
@@ -44,7 +47,7 @@ import com.hro.qrdoc.ui.panel.base.DefaultInputPanel;
 */
 public class QrBoxPanel extends JPanel 
 {
-
+	
 	/**
 	 * 序列版本号.
 	 */
@@ -181,9 +184,10 @@ public class QrBoxPanel extends JPanel
 		
 		// 二维码文本域.
 		qrCodeTextLabel.setBounds(25, 140, 745, 30);
-		qrCodeText.setBounds(25, 180, 745, 330);
+		JScrollPane jsp = new JScrollPane(qrCodeText);
+		jsp.setBounds(25, 180, 745, 330);
 		this.add(qrCodeTextLabel);
-		this.add(qrCodeText);
+		this.add(jsp);
 		
 		// 下一箱按钮.
 		nextBtn.setBounds(300, 525, 80, 30);
@@ -199,16 +203,25 @@ public class QrBoxPanel extends JPanel
 	 */
 	protected void initAction() 
 	{
+		// 初始化页面对象数据.
 		qrBoxPage.setCountPanel(countPanel);
 		qrBoxPage.setOrderNumPanel(orderNumPanel);
 		qrBoxPage.setBigBoxCodePanel(bigBoxCodePanel);
+		qrBoxPage.setQrCodeTextLabel(qrCodeTextLabel);
 		qrBoxPage.setQrCodeText(qrCodeText);
+		
+		// 初始化全局变量数据.
+		qrBoxPage.initQrBoxPage();
 		
 		// 下一箱按钮.
 		nextBtn.addActionListener(new NextBtnAction(qrBoxPage));
 		
 		// 结束按钮.
 		finishBtn.addActionListener(new FinishBtnAction(qrBoxPage));
+		
+		qrCodeText.getDocument().addDocumentListener(new QrCodeTextInputListener(qrCodeText, qrBoxPage));
+		
+		countPanel.addListener(new CountInputListener(countPanel, qrCodeText));
 	}
 	
 }

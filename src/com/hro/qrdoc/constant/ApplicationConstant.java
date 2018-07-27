@@ -37,6 +37,11 @@ public interface ApplicationConstant
 {
 	
 	/**
+	 * 系统换行符.
+	 */
+	String LINE_SEPARATOR = System.getProperty("line.separator");
+	
+	/**
 	 * 应用配置.
 	 */
 	Map<String, String> APP_CONFIGS = ApplicationConfigHelper.getInstance().getPropMap();
@@ -110,5 +115,10 @@ public interface ApplicationConstant
 	 * 二维码数据正则匹配key.
 	 */
 	String QRDOC_FILE_REGEX_KEY_QRCODETEXT = APP_CONFIGS.get("qrdoc.file.regex.key.qrcodetext");
+	
+	/**
+	 * 装箱二维码存放根路径.
+	 */
+	String QRDOC_FILE_ROOT_PATH = APP_CONFIGS.get("qrdoc.file.root.path");
 	
 }

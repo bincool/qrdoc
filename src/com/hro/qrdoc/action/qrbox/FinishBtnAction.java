@@ -11,6 +11,8 @@
 package com.hro.qrdoc.action.qrbox;
 
 import java.awt.event.ActionEvent;
+import java.io.File;
+import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
@@ -68,17 +70,43 @@ public class FinishBtnAction extends BaseAction
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
+		// 数据处理.
 		qrBoxPage.flushQrcodeBoxBean();
 		qrcodeBoxBean = qrBoxPage.getQrcodeBoxBean();
 		
+		// 参数校验.
 		String verifyResult = QrBoxUtils.verifyQrBoxPageParams(qrcodeBoxBean);
-		if (!SysStatusAndType.QBPParamsVerify.OK.equals(verifyResult)) 
+		if (SysStatusAndType.QBPParamsVerify.OK.equals(verifyResult)) 
 		{
-			JOptionPane.showMessageDialog(null, ApplicationConstant.APP_CONFIGS.get(verifyResult), ApplicationConstant.FRAME_TITLE, JOptionPane.WARNING_MESSAGE);
+			try 
+			{
+				// 保存数据到子文件.
+				String srcPathname = qrBoxPage.getFileName() + File.separator + qrBoxPage.getBoxDataBuffer().size() + ".txt";
+				QrBoxUtils.saveData(srcPathname, qrcodeBoxBean);
+				qrBoxPage.getBoxDataBuffer().put(srcPathname, 10);
+				qrBoxPage.clearBoxData();
+			} 
+			catch (IOException e1) 
+			{
+				LOGGER.error(qrcodeBoxBean, e1);
+				JOptionPane.showMessageDialog(null, ApplicationConstant.APP_CONFIGS.get(verifyResult), ApplicationConstant.FRAME_TITLE, JOptionPane.WARNING_MESSAGE);
+				return;
+			}
+		}
+		
+		try 
+		{
+			// 合并子文件.
+			QrBoxUtils.mergeSubFile(qrBoxPage);
 		} 
-		else 
+		catch (IOException e1) 
 		{
-			JOptionPane.showMessageDialog(null, ApplicationConstant.APP_CONFIGS.get(verifyResult), ApplicationConstant.FRAME_TITLE, JOptionPane.WARNING_MESSAGE);
+			LOGGER.error("子文件合并异常", e1);
+		} 
+		finally 
+		{
+			// 初始化全局变量.
+			qrBoxPage.initQrBoxPage();
 		}
 	}
 	

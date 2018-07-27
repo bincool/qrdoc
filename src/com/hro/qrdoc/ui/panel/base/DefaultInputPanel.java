@@ -21,6 +21,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.event.DocumentListener;
 
 import com.hro.qrdoc.action.listener.CancelBtnMouseAdapter;
 import com.hro.qrdoc.action.listener.DefaultInputMouseAdapter;
@@ -109,6 +110,15 @@ public class DefaultInputPanel extends JPanel
 		this.borderColor = borderColor;
 		initLayout();
 		initAction();
+	}
+	
+	/**
+	 * …Ë÷√º‡Ã˝∆˜.
+	 * @param listener
+	 */
+	public void addListener(DocumentListener listener) 
+	{
+		inputText.getDocument().addDocumentListener(listener);
 	}
 
 	/**

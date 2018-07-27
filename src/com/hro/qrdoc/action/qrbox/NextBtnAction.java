@@ -11,6 +11,9 @@
 package com.hro.qrdoc.action.qrbox;
 
 import java.awt.event.ActionEvent;
+import java.io.File;
+import java.io.IOException;
+import java.util.Map;
 
 import javax.swing.JOptionPane;
 
@@ -68,9 +71,11 @@ public class NextBtnAction extends BaseAction
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
+		// 数据处理.
 		qrBoxPage.flushQrcodeBoxBean();
 		qrcodeBoxBean = qrBoxPage.getQrcodeBoxBean();
 		
+		// 参数校验.
 		String verifyResult = QrBoxUtils.verifyQrBoxPageParams(qrcodeBoxBean);
 		if (!SysStatusAndType.QBPParamsVerify.OK.equals(verifyResult)) 
 		{
@@ -78,9 +83,33 @@ public class NextBtnAction extends BaseAction
 		} 
 		else 
 		{
-			JOptionPane.showMessageDialog(null, ApplicationConstant.APP_CONFIGS.get(verifyResult), ApplicationConstant.FRAME_TITLE, JOptionPane.WARNING_MESSAGE);
+			try 
+			{
+				// 保存数据到子文件.
+				String srcPathname = qrBoxPage.getFileName() + File.separator + qrBoxPage.getBoxDataBuffer().size() + ".txt";
+				QrBoxUtils.saveData(srcPathname, qrcodeBoxBean);
+				
+				String qrCodeText = QrBoxUtils.trim(qrcodeBoxBean.getQrCodeText());
+				String[] arr = qrCodeText.split("\\n");
+				qrBoxPage.getBoxDataBuffer().put(srcPathname, arr.length);
+				qrBoxPage.clearBoxData();
+				
+				// 箱数个数计算.
+				int sum = 0;
+				for (Map.Entry<String, Integer> entry : qrBoxPage.getBoxDataBuffer().entrySet()) 
+				{
+					sum += entry.getValue();
+				}
+				qrBoxPage.getQrCodeTextLabel().setText(ApplicationConstant.LABEL_TITLE_QRCODETEXT.replace("x", qrBoxPage.getBoxDataBuffer().size() + "").replace("y", sum + ""));
+				
+				qrBoxPage.getQrCodeText().setEnabled(true);
+			} 
+			catch (IOException e1) 
+			{
+				LOGGER.error(qrcodeBoxBean, e1);
+				JOptionPane.showMessageDialog(null, ApplicationConstant.APP_CONFIGS.get(verifyResult), ApplicationConstant.FRAME_TITLE, JOptionPane.WARNING_MESSAGE);
+			}
 		}
-		
 	}
 	
 }

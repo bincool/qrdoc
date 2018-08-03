@@ -16,19 +16,11 @@
 	</repositories>
 	
 	<properties>
-		<!-- log4j版本号 -->
-		<log4j.version>1.2.17</log4j.version>
-		<commons-utils.version>1.0.0</commons-utils.version>
+		<!-- commons-utils版本号 -->
+		<commons-utils.version>1.0.1</commons-utils.version>
 	</properties>
 
 	<dependencies>
-
-		<!-- log4j工具包 -->
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>${log4j.version}</version>
-		</dependency>
 		
 		<!-- 自定义commons-utils工具包 -->
 		<dependency>

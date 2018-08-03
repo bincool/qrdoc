@@ -2,10 +2,10 @@
 * @FileName: SysStatusAndType.java
 * @Package: com.hro.qrdoc.constant
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: SysStatusAndType.java: ÏµÍ³×´Ì¬ºÍÀàĞÍ.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê6ÔÂ7ÈÕ ÏÂÎç5:45:08.
-* @Content: ĞÂÔö.
+* @Description: SysStatusAndType.java: ç³»ç»ŸçŠ¶æ€å’Œç±»å‹.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ5:45:08.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.constant;
@@ -15,50 +15,50 @@ package com.hro.qrdoc.constant;
 * 
 * @Description: 
 * <p>
-* ÏµÍ³×´Ì¬ºÍÀàĞÍ.
+* ç³»ç»ŸçŠ¶æ€å’Œç±»å‹.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö£ºÏµÍ³×´Ì¬ºÍÀàĞÍ³£Á¿ÎïÀíÒâÒå»¯.
+* è¯¦ç»†æè¿°ï¼šç³»ç»ŸçŠ¶æ€å’Œç±»å‹å¸¸é‡ç‰©ç†æ„ä¹‰åŒ–.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê6ÔÂ7ÈÕ ÏÂÎç5:45:08.
+* @Date: 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ5:45:08.
 * 
 */
 public interface SysStatusAndType 
 {
 	
 	/**
-	 * ¶şÎ¬Âë×°ÏäÒ³ÃæbeanĞ£Ñé½á¹û.
+	 * äºŒç»´ç è£…ç®±é¡µé¢beanæ ¡éªŒç»“æœ.
 	 */
 	interface QBPParamsVerify 
 	{
 		/**
-		 * Ã¿Ïä¸öÊı´íÎó.
+		 * æ¯ç®±ä¸ªæ•°é”™è¯¯.
 		 */
 		String ERR_COUNT = "qrboxpage.params.verify.err.count";
 		
 		/**
-		 * ¶©µ¥±àºÅ´íÎó.
+		 * è®¢å•ç¼–å·é”™è¯¯.
 		 */
 		String ERR_ORDERNUM = "qrboxpage.params.verify.err.ordernum";
 		
 		/**
-		 * ´óÏäÌõÂë´íÎó.
+		 * å¤§ç®±æ¡ç é”™è¯¯.
 		 */
 		String ERR_BIGBOXCODE = "qrboxpage.params.verify.err.bigboxcode";
 		
 		/**
-		 * ×°Ïä¶şÎ¬Âë´íÎó.
+		 * è£…ç®±äºŒç»´ç é”™è¯¯.
 		 */
 		String ERR_QRCODETEXT = "qrboxpage.params.verify.err.qrcodetext";
 		
 		/**
-		 * Ğ£ÑéÍ¨¹ı.
+		 * æ ¡éªŒé€šè¿‡.
 		 */
 		String OK = "qrboxpage.params.verify.ok";
 	}

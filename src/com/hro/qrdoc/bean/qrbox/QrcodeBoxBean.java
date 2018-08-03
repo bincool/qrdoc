@@ -2,10 +2,10 @@
 * @FileName: QrcodeBoxBean.java
 * @Package: com.hro.qrdoc.bean.qrbox
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: QrcodeBoxBean.java: ¶şÎ¬Âë×°Ïäbean.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê6ÔÂ7ÈÕ ÏÂÎç3:07:24.
-* @Content: ĞÂÔö.
+* @Description: QrcodeBoxBean.java: äºŒç»´ç è£…ç®±bean.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ3:07:24.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.bean.qrbox;
@@ -17,55 +17,55 @@ import java.io.Serializable;
 * 
 * @Description: 
 * <p>
-* ¶şÎ¬Âë×°Ïäbean.
+* äºŒç»´ç è£…ç®±bean.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê6ÔÂ7ÈÕ ÏÂÎç3:07:24.
+* @Date: 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ3:07:24.
 * 
 */
 public class QrcodeBoxBean implements Serializable 
 {
 	
 	/**
-	 * ĞòÁĞ°æ±¾ºÅ.
+	 * åºåˆ—ç‰ˆæœ¬å·.
 	 */
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * ÊµÌåID.
+	 * å®ä½“ID.
 	 */
 	private String id;
 	
 	/**
-	 * Ã¿Ïä¸öÊı.
+	 * æ¯ç®±ä¸ªæ•°.
 	 */
 	private String count;
 	
 	/**
-	 * ¶©µ¥±àºÅ.
+	 * è®¢å•ç¼–å·.
 	 */
 	private String orderNum;
 	
 	/**
-	 * ´óÏäÌõÂë.
+	 * å¤§ç®±æ¡ç .
 	 */
 	private String bigBoxCode;
 	
 	/**
-	 * ×°Ïä¶şÎ¬Âë.
+	 * è£…ç®±äºŒç»´ç .
 	 */
 	private String qrCodeText;
 
 	/**
-	 * »ñÈ¡id.
+	 * è·å–id.
 	 * @return
 	 *     id.
 	 */
@@ -75,7 +75,7 @@ public class QrcodeBoxBean implements Serializable
 	}
 
 	/**
-	 * ÉèÖÃid.
+	 * è®¾ç½®id.
 	 * @param
 	 *     id.
 	 */
@@ -85,7 +85,7 @@ public class QrcodeBoxBean implements Serializable
 	}
 
 	/**
-	 * »ñÈ¡count.
+	 * è·å–count.
 	 * @return
 	 *     count.
 	 */
@@ -95,7 +95,7 @@ public class QrcodeBoxBean implements Serializable
 	}
 
 	/**
-	 * ÉèÖÃcount.
+	 * è®¾ç½®count.
 	 * @param
 	 *     count.
 	 */
@@ -105,7 +105,7 @@ public class QrcodeBoxBean implements Serializable
 	}
 
 	/**
-	 * »ñÈ¡orderNum.
+	 * è·å–orderNum.
 	 * @return
 	 *     orderNum.
 	 */
@@ -115,7 +115,7 @@ public class QrcodeBoxBean implements Serializable
 	}
 
 	/**
-	 * ÉèÖÃorderNum.
+	 * è®¾ç½®orderNum.
 	 * @param
 	 *     orderNum.
 	 */
@@ -125,7 +125,7 @@ public class QrcodeBoxBean implements Serializable
 	}
 
 	/**
-	 * »ñÈ¡bigBoxCode.
+	 * è·å–bigBoxCode.
 	 * @return
 	 *     bigBoxCode.
 	 */
@@ -135,7 +135,7 @@ public class QrcodeBoxBean implements Serializable
 	}
 
 	/**
-	 * ÉèÖÃbigBoxCode.
+	 * è®¾ç½®bigBoxCode.
 	 * @param
 	 *     bigBoxCode.
 	 */
@@ -145,7 +145,7 @@ public class QrcodeBoxBean implements Serializable
 	}
 
 	/**
-	 * »ñÈ¡qrCodeText.
+	 * è·å–qrCodeText.
 	 * @return
 	 *     qrCodeText.
 	 */
@@ -155,7 +155,7 @@ public class QrcodeBoxBean implements Serializable
 	}
 
 	/**
-	 * ÉèÖÃqrCodeText.
+	 * è®¾ç½®qrCodeText.
 	 * @param
 	 *     qrCodeText.
 	 */

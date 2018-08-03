@@ -2,10 +2,10 @@
 * @FileName: CancelBtnAction.java
 * @Package: com.hro.qrdoc.action.qrbox
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: CancelBtnAction.java: È¡ÏûÖØÖÃ°´Å¥ÊÂ¼ş.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê6ÔÂ7ÈÕ ÏÂÎç2:40:22.
-* @Content: ĞÂÔö.
+* @Description: CancelBtnAction.java: å–æ¶ˆé‡ç½®æŒ‰é’®äº‹ä»¶.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ2:40:22.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.action.qrbox;
@@ -23,37 +23,37 @@ import com.hro.qrdoc.action.base.BaseAction;
 * 
 * @Description: 
 * <p>
-* È¡ÏûÖØÖÃ°´Å¥ÊÂ¼ş.
+* å–æ¶ˆé‡ç½®æŒ‰é’®äº‹ä»¶.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê6ÔÂ7ÈÕ ÏÂÎç2:40:22.
+* @Date: 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ2:40:22.
 * 
 */
 public class CancelBtnAction extends BaseAction 
 {
 	
 	/**
-	 * ÈÕÖ¾¶ÔÏó.
+	 * æ—¥å¿—å¯¹è±¡.
 	 */
 	private static final Logger LOGGER = Logger.getLogger(CancelBtnAction.class);
 	
 	/**
-	 * ÎÄ±¾ÊäÈë¿ò.
+	 * æ–‡æœ¬è¾“å…¥æ¡†.
 	 */
 	private JTextField inputText;
 	
 	/**
-	 * ÓĞ²ÎÊı¹¹Ôìº¯Êı.
+	 * æœ‰å‚æ•°æ„é€ å‡½æ•°.
 	 * @param inputText
-	 * 		´ıÈ¡ÏûÖØÖÃµÄinputText¿ò.
+	 * 		å¾…å–æ¶ˆé‡ç½®çš„inputTextæ¡†.
 	 */
 	public CancelBtnAction(JTextField inputText) 
 	{

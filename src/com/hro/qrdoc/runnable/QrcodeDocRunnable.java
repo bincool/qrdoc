@@ -2,10 +2,10 @@
 * @FileName: QrcodeDocRunnable.java
 * @Package: com.hro.qrdoc.runnable
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: QrcodeDocRunnable.java: ¶şÎ¬ÂëÉ¨Ãè¹éµµÏß³Ì.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê6ÔÂ4ÈÕ ÏÂÎç12:55:54.
-* @Content: ĞÂÔö.
+* @Description: QrcodeDocRunnable.java: äºŒç»´ç æ‰«æå½’æ¡£çº¿ç¨‹.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´6æœˆ4æ—¥ ä¸‹åˆ12:55:54.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.runnable;
@@ -21,25 +21,25 @@ import com.hro.qrdoc.ui.QrcodeDocFrame;
 * 
 * @Description: 
 * <p>
-* ¶şÎ¬ÂëÉ¨Ãè¹éµµÏß³Ì.
+* äºŒç»´ç æ‰«æå½’æ¡£çº¿ç¨‹.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê6ÔÂ4ÈÕ ÏÂÎç12:55:54.
+* @Date: 2018å¹´6æœˆ4æ—¥ ä¸‹åˆ12:55:54.
 * 
 */
 public class QrcodeDocRunnable implements Runnable 
 {
 	
 	/**
-	 * ÈÕÖ¾¶ÔÏó.
+	 * æ—¥å¿—å¯¹è±¡.
 	 */
 	private static final Logger LOGGER = Logger.getLogger(QrcodeDocRunnable.class);
 
@@ -51,10 +51,10 @@ public class QrcodeDocRunnable implements Runnable
 	{
 		try 
 		{
-			// ÉèÖÃ¶Ô»°¿òµÄ·ç¸ñ.
+			// è®¾ç½®å¯¹è¯æ¡†çš„é£æ ¼.
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 
-			// ´´½¨Ò»¸ö¼ÇÊÂ±¾¶ÔÏó.
+			// åˆ›å»ºä¸€ä¸ªè®°äº‹æœ¬å¯¹è±¡.
 			QrcodeDocFrame window = new QrcodeDocFrame();
 			window.getFrame().setVisible(true);
 		} 

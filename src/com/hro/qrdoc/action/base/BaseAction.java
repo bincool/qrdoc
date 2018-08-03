@@ -2,10 +2,10 @@
 * @FileName: BaseAction.java
 * @Package: com.hro.qrdoc.action.base
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: BaseAction.java: »ù´¡ÊÂ¼ş.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê6ÔÂ7ÈÕ ÏÂÎç12:56:36.
-* @Content: ĞÂÔö.
+* @Description: BaseAction.java: åŸºç¡€äº‹ä»¶.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ12:56:36.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.action.base;
@@ -24,25 +24,25 @@ import com.hro.qrdoc.constant.ApplicationConstant;
 * 
 * @Description: 
 * <p>
-* »ù´¡ÊÂ¼ş.
+* åŸºç¡€äº‹ä»¶.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê6ÔÂ7ÈÕ ÏÂÎç12:56:36.
+* @Date: 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ12:56:36.
 * 
 */
 public class BaseAction implements ActionListener 
 {
 	
 	/**
-	 * ÈÕÖ¾¶ÔÏó.
+	 * æ—¥å¿—å¯¹è±¡.
 	 */
 	protected static final Logger LOGGER = Logger.getLogger(BaseAction.class);
 

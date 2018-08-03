@@ -2,10 +2,10 @@
 * @FileName: DefaultInputMouseAdapter.java
 * @Package: com.hro.qrdoc.action.listener
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: DefaultInputMouseAdapter.java: ÊäÈë¿òpanelÊó±ê¼àÌı.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê6ÔÂ6ÈÕ ÏÂÎç4:42:46.
-* @Content: ĞÂÔö.
+* @Description: DefaultInputMouseAdapter.java: è¾“å…¥æ¡†panelé¼ æ ‡ç›‘å¬.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´6æœˆ6æ—¥ ä¸‹åˆ4:42:46.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.action.listener;
@@ -20,30 +20,30 @@ import com.hro.qrdoc.ui.panel.base.DefaultInputPanel;
 * 
 * @Description: 
 * <p>
-* ÊäÈë¿òpannelÊó±ê¼àÌı.
+* è¾“å…¥æ¡†pannelé¼ æ ‡ç›‘å¬.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê6ÔÂ6ÈÕ ÏÂÎç4:42:46.
+* @Date: 2018å¹´6æœˆ6æ—¥ ä¸‹åˆ4:42:46.
 * 
 */
 public class DefaultInputMouseAdapter extends MouseAdapter 
 {
 	
 	/**
-	 * ÊäÈë¿òpanel.
+	 * è¾“å…¥æ¡†panel.
 	 */
 	private DefaultInputPanel inputPanel;
 	
 	/**
-	 * ÓĞ²Î¹¹Ôìº¯Êı.
+	 * æœ‰å‚æ„é€ å‡½æ•°.
 	 * @param inputPanel
 	 */
 	public DefaultInputMouseAdapter(DefaultInputPanel inputPanel) 

@@ -2,10 +2,10 @@
 * @FileName: BasePanelIntf.java
 * @Package: com.hro.qrdoc.ui.panel.base.intf
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: BasePanelIntf.java: »ù´¡panel½Ó¿Ú.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê6ÔÂ7ÈÕ ÏÂÎç4:11:55.
-* @Content: ĞÂÔö.
+* @Description: BasePanelIntf.java: åŸºç¡€panelæ¥å£.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ4:11:55.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.ui.panel.base.intf;
@@ -15,30 +15,30 @@ package com.hro.qrdoc.ui.panel.base.intf;
 * 
 * @Description: 
 * <p>
-* »ù´¡panel½Ó¿Ú.
+* åŸºç¡€panelæ¥å£.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö£º×Ô¶¨ÒåpanelÔ¼Êø£¬ĞèÒª°üº¬³õÊ¼»¯²¼¾ÖºÍ³õÊ¼»¯ÊÂ¼ş°ó¶¨.
+* è¯¦ç»†æè¿°ï¼šè‡ªå®šä¹‰panelçº¦æŸï¼Œéœ€è¦åŒ…å«åˆå§‹åŒ–å¸ƒå±€å’Œåˆå§‹åŒ–äº‹ä»¶ç»‘å®š.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê6ÔÂ7ÈÕ ÏÂÎç4:11:55.
+* @Date: 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ4:11:55.
 * 
 */
 public interface BasePanelIntf 
 {
 	
 	/**
-	 * ³õÊ¼»¯²¼¾Ö.
+	 * åˆå§‹åŒ–å¸ƒå±€.
 	 */
 	void initLayout();
 	
 	/**
-	 * ³õÊ¼»¯ÊÂ¼ş.
+	 * åˆå§‹åŒ–äº‹ä»¶.
 	 */
 	void initAction();
 	

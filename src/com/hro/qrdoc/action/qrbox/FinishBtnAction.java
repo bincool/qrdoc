@@ -2,10 +2,10 @@
 * @FileName: FinishBtnAction.java
 * @Package: com.hro.qrdoc.action.qrbox
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: FinishBtnAction.java: ½áÊø°´Å¥ÊÂ¼ş.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê6ÔÂ7ÈÕ ÏÂÎç3:31:38.
-* @Content: ĞÂÔö.
+* @Description: FinishBtnAction.java: ç»“æŸæŒ‰é’®äº‹ä»¶.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ3:31:38.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.action.qrbox;
@@ -28,35 +28,35 @@ import com.hro.qrdoc.utils.qrbox.QrBoxUtils;
 * 
 * @Description: 
 * <p>
-* ½áÊø°´Å¥ÊÂ¼ş.
+* ç»“æŸæŒ‰é’®äº‹ä»¶.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö£º½áÊø°´Å¥ÊÂ¼ş£¬±£´æÎÄ¼ş£¬³õÊ¼»¯¶şÎ¬Âë×°Ïäpanel.
+* è¯¦ç»†æè¿°ï¼šç»“æŸæŒ‰é’®äº‹ä»¶ï¼Œä¿å­˜æ–‡ä»¶ï¼Œåˆå§‹åŒ–äºŒç»´ç è£…ç®±panel.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê6ÔÂ7ÈÕ ÏÂÎç3:31:38.
+* @Date: 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ3:31:38.
 * 
 */
 public class FinishBtnAction extends BaseAction 
 {
 	
 	/**
-	 * ¶şÎ¬Âë×°ÏäÒ³Ãæbean.
+	 * äºŒç»´ç è£…ç®±é¡µé¢bean.
 	 */
 	private QrBoxPage qrBoxPage;
 	
 	/**
-	 * ¶şÎ¬Âë×°Ïäbean.
+	 * äºŒç»´ç è£…ç®±bean.
 	 */
 	private QrcodeBoxBean qrcodeBoxBean;
 	
 	/**
-	 * ÓĞ²Î¹¹Ôìº¯Êı.
+	 * æœ‰å‚æ„é€ å‡½æ•°.
 	 * @param qrBoxPage
 	 */
 	public FinishBtnAction(QrBoxPage qrBoxPage) 
@@ -70,17 +70,17 @@ public class FinishBtnAction extends BaseAction
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
-		// Êı¾İ´¦Àí.
+		// æ•°æ®å¤„ç†.
 		qrBoxPage.flushQrcodeBoxBean();
 		qrcodeBoxBean = qrBoxPage.getQrcodeBoxBean();
 		
-		// ²ÎÊıĞ£Ñé.
+		// å‚æ•°æ ¡éªŒ.
 		String verifyResult = QrBoxUtils.verifyQrBoxPageParams(qrcodeBoxBean);
 		if (SysStatusAndType.QBPParamsVerify.OK.equals(verifyResult)) 
 		{
 			try 
 			{
-				// ±£´æÊı¾İµ½×ÓÎÄ¼ş.
+				// ä¿å­˜æ•°æ®åˆ°å­æ–‡ä»¶.
 				String srcPathname = qrBoxPage.getFileName() + File.separator + qrBoxPage.getBoxDataBuffer().size() + ".txt";
 				QrBoxUtils.saveData(srcPathname, qrcodeBoxBean);
 				qrBoxPage.getBoxDataBuffer().put(srcPathname, 10);
@@ -96,16 +96,16 @@ public class FinishBtnAction extends BaseAction
 		
 		try 
 		{
-			// ºÏ²¢×ÓÎÄ¼ş.
+			// åˆå¹¶å­æ–‡ä»¶.
 			QrBoxUtils.mergeSubFile(qrBoxPage);
 		} 
 		catch (IOException e1) 
 		{
-			LOGGER.error("×ÓÎÄ¼şºÏ²¢Òì³£", e1);
+			LOGGER.error("å­æ–‡ä»¶åˆå¹¶å¼‚å¸¸", e1);
 		} 
 		finally 
 		{
-			// ³õÊ¼»¯È«¾Ö±äÁ¿.
+			// åˆå§‹åŒ–å…¨å±€å˜é‡.
 			qrBoxPage.initQrBoxPage();
 		}
 	}

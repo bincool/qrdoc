@@ -2,10 +2,10 @@
 * @FileName: NextBtnAction.java
 * @Package: com.hro.qrdoc.action.qrbox
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: NextBtnAction.java: ÏÂÒ»Ïä°´Å¥ÊÂ¼ş.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê6ÔÂ7ÈÕ ÏÂÎç3:44:01.
-* @Content: ĞÂÔö.
+* @Description: NextBtnAction.java: ä¸‹ä¸€ç®±æŒ‰é’®äº‹ä»¶.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ3:44:01.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.action.qrbox;
@@ -29,35 +29,35 @@ import com.hro.qrdoc.utils.qrbox.QrBoxUtils;
 * 
 * @Description: 
 * <p>
-* ÏÂÒ»Ïä°´Å¥ÊÂ¼ş.
+* ä¸‹ä¸€ç®±æŒ‰é’®äº‹ä»¶.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö£ºĞ´ÎÄ¼ş£¬²¢ÖØÖÃ´óÏäÌõÂë£¬×°Ïä¶şÎ¬Âë.
+* è¯¦ç»†æè¿°ï¼šå†™æ–‡ä»¶ï¼Œå¹¶é‡ç½®å¤§ç®±æ¡ç ï¼Œè£…ç®±äºŒç»´ç .
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê6ÔÂ7ÈÕ ÏÂÎç3:44:01.
+* @Date: 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ3:44:01.
 * 
 */
 public class NextBtnAction extends BaseAction 
 {
 	
 	/**
-	 * ¶şÎ¬Âë×°ÏäÒ³Ãæbean.
+	 * äºŒç»´ç è£…ç®±é¡µé¢bean.
 	 */
 	private QrBoxPage qrBoxPage;
 	
 	/**
-	 * ¶şÎ¬Âë×°Ïäbean.
+	 * äºŒç»´ç è£…ç®±bean.
 	 */
 	private QrcodeBoxBean qrcodeBoxBean;
 	
 	/**
-	 * ÓĞ²Î¹¹Ôìº¯Êı.
+	 * æœ‰å‚æ„é€ å‡½æ•°.
 	 * @param qrBoxPage
 	 */
 	public NextBtnAction(QrBoxPage qrBoxPage) 
@@ -71,11 +71,11 @@ public class NextBtnAction extends BaseAction
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
-		// Êı¾İ´¦Àí.
+		// æ•°æ®å¤„ç†.
 		qrBoxPage.flushQrcodeBoxBean();
 		qrcodeBoxBean = qrBoxPage.getQrcodeBoxBean();
 		
-		// ²ÎÊıĞ£Ñé.
+		// å‚æ•°æ ¡éªŒ.
 		String verifyResult = QrBoxUtils.verifyQrBoxPageParams(qrcodeBoxBean);
 		if (!SysStatusAndType.QBPParamsVerify.OK.equals(verifyResult)) 
 		{
@@ -85,7 +85,7 @@ public class NextBtnAction extends BaseAction
 		{
 			try 
 			{
-				// ±£´æÊı¾İµ½×ÓÎÄ¼ş.
+				// ä¿å­˜æ•°æ®åˆ°å­æ–‡ä»¶.
 				String srcPathname = qrBoxPage.getFileName() + File.separator + qrBoxPage.getBoxDataBuffer().size() + ".txt";
 				QrBoxUtils.saveData(srcPathname, qrcodeBoxBean);
 				
@@ -94,7 +94,7 @@ public class NextBtnAction extends BaseAction
 				qrBoxPage.getBoxDataBuffer().put(srcPathname, arr.length);
 				qrBoxPage.clearBoxData();
 				
-				// ÏäÊı¸öÊı¼ÆËã.
+				// ç®±æ•°ä¸ªæ•°è®¡ç®—.
 				int sum = 0;
 				for (Map.Entry<String, Integer> entry : qrBoxPage.getBoxDataBuffer().entrySet()) 
 				{

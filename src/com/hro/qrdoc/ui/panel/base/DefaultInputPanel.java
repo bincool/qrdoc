@@ -2,10 +2,10 @@
 * @FileName: DefaultInputPanel.java
 * @Package: com.hro.qrdoc.ui.panel.base
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: DefaultInputPanel.java: Ô²½Çinput¿ò.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê6ÔÂ6ÈÕ ÉÏÎç11:23:13.
-* @Content: ĞÂÔö.
+* @Description: DefaultInputPanel.java: åœ†è§’inputæ¡†.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´6æœˆ6æ—¥ ä¸Šåˆ11:23:13.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.ui.panel.base;
@@ -33,65 +33,65 @@ import com.hro.qrdoc.constant.ApplicationConstant;
 * 
 * @Description: 
 * <p>
-* Ô²½Çinput¿ò.
+* åœ†è§’inputæ¡†.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê6ÔÂ6ÈÕ ÉÏÎç11:23:13.
+* @Date: 2018å¹´6æœˆ6æ—¥ ä¸Šåˆ11:23:13.
 * 
 */
 public class DefaultInputPanel extends JPanel
 {
 
 	/**
-	 * ĞòÁĞ°æ±¾ºÅ.
+	 * åºåˆ—ç‰ˆæœ¬å·.
 	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**
-	 * Õı³£ÑÕÉ«.
+	 * æ­£å¸¸é¢œè‰².
 	 */
 	private Color normalColor = Color.LIGHT_GRAY;
 	
 	/**
-	 * ÊäÈë¿ò±ß¿òÑÕÉ«.
+	 * è¾“å…¥æ¡†è¾¹æ¡†é¢œè‰².
 	 */
 	private Color borderColor = Color.LIGHT_GRAY;
 	
 	/**
-	 * ±ß¿ò»æÖÆ¿ØÖÆ£ºtrue±íÊ¾»æÖÆ±ß¿ò£¬false±íÊ¾Ä¬ÈÏ±ß¿ò.
+	 * è¾¹æ¡†ç»˜åˆ¶æ§åˆ¶ï¼štrueè¡¨ç¤ºç»˜åˆ¶è¾¹æ¡†ï¼Œfalseè¡¨ç¤ºé»˜è®¤è¾¹æ¡†.
 	 */
 	private boolean borderFlag = false;
 	
 	/**
-	 * ÎÄ±¾ÊäÈë¿ò.
+	 * æ–‡æœ¬è¾“å…¥æ¡†.
 	 */
 	private JTextField inputText = new JTextField();
 	
 	/**
-	 * ÊäÈë¿òÄ¬ÈÏ¿í.
+	 * è¾“å…¥æ¡†é»˜è®¤å®½.
 	 */
 	private int width = 153;
 	
 	/**
-	 * ÊäÈë¿òÄ¬ÈÏ¸ß.
+	 * è¾“å…¥æ¡†é»˜è®¤é«˜.
 	 */
 	private int height = 17;
 	
 	/**
-	 * È¡Ïû°´Å¥.
+	 * å–æ¶ˆæŒ‰é’®.
 	 */
 	private JButton cancelBtn = new JButton(new ImageIcon(Toolkit.getDefaultToolkit().getImage(ApplicationConstant.FRAME_CANCEL_HIDE_PATH)));
 	
 	/**
-	 * ÎŞ²Î¹¹Ôìº¯Êı.
+	 * æ— å‚æ„é€ å‡½æ•°.
 	 */
 	public DefaultInputPanel() 
 	{
@@ -100,7 +100,7 @@ public class DefaultInputPanel extends JPanel
 	}
 	
 	/**
-	 * ÓĞ²Î¹¹Ôìº¯Êı.
+	 * æœ‰å‚æ„é€ å‡½æ•°.
 	 * @param normalColor
 	 * @param borderColor
 	 */
@@ -113,7 +113,7 @@ public class DefaultInputPanel extends JPanel
 	}
 	
 	/**
-	 * ÉèÖÃ¼àÌıÆ÷.
+	 * è®¾ç½®ç›‘å¬å™¨.
 	 * @param listener
 	 */
 	public void addListener(DocumentListener listener) 
@@ -122,7 +122,7 @@ public class DefaultInputPanel extends JPanel
 	}
 
 	/**
-	 * ÉèÖÃborderFlag.
+	 * è®¾ç½®borderFlag.
 	 * @param
 	 *     borderFlag.
 	 */
@@ -132,7 +132,7 @@ public class DefaultInputPanel extends JPanel
 	}
 
 	/**
-	 * »ñÈ¡borderFlag.
+	 * è·å–borderFlag.
 	 * @return
 	 *     borderFlag.
 	 */
@@ -142,19 +142,19 @@ public class DefaultInputPanel extends JPanel
 	}
 	
 	/**
-	 * ³õÊ¼»¯ÊäÈë¿ò²¼¾Ö£¬¿ÉÒÔ±»×ÓÀà¼Ì³Ğ.
+	 * åˆå§‹åŒ–è¾“å…¥æ¡†å¸ƒå±€ï¼Œå¯ä»¥è¢«å­ç±»ç»§æ‰¿.
 	 */
 	protected void initLayout() 
 	{
 		this.setLayout(null);
 		
-		// ÊäÈë¿ò²¼¾Ö.
+		// è¾“å…¥æ¡†å¸ƒå±€.
 		inputText.setBounds(7, 0, width, 13 + height);
 		inputText.setOpaque(false);
 		inputText.setBorder(null);
 		this.add(inputText);
 		
-		// È¡ÏûÖØÖÃ°´Å¥²¼¾Ö.
+		// å–æ¶ˆé‡ç½®æŒ‰é’®å¸ƒå±€.
 		cancelBtn.setBounds(7 + width, 0, 30, 13 + height);
 		cancelBtn.setBorder(null);
 		cancelBtn.setBorderPainted(false);
@@ -164,24 +164,24 @@ public class DefaultInputPanel extends JPanel
 	}
 	
 	/**
-	 * ³õÊ¼»¯ÊäÈë¿òÊÂ¼ş°ó¶¨£¬¿ÉÒÔ±»×ÓÀà¼Ì³Ğ.
+	 * åˆå§‹åŒ–è¾“å…¥æ¡†äº‹ä»¶ç»‘å®šï¼Œå¯ä»¥è¢«å­ç±»ç»§æ‰¿.
 	 */
 	protected void initAction() 
 	{
-		// ÊäÈë¿òÊó±êÊÂ¼ş.
+		// è¾“å…¥æ¡†é¼ æ ‡äº‹ä»¶.
 		DefaultInputMouseAdapter countListener = new DefaultInputMouseAdapter(this);
 		inputText.addMouseListener(countListener);
 		
-		// È¡ÏûÖØÖÃ°´Å¥ÊÂ¼ş.
+		// å–æ¶ˆé‡ç½®æŒ‰é’®äº‹ä»¶.
 		cancelBtn.addActionListener(new CancelBtnAction(inputText));
 		
-		// È¡ÏûÖØÖÃ°´Å¥Êó±êÊÂ¼ş.
+		// å–æ¶ˆé‡ç½®æŒ‰é’®é¼ æ ‡äº‹ä»¶.
 		CancelBtnMouseAdapter cancelBtnListener = new CancelBtnMouseAdapter(cancelBtn);
 		cancelBtn.addMouseListener(cancelBtnListener);
 	}
 	
 	/**
-	 * ÖØÖÃÊäÈë¿òÄÚÈİ.
+	 * é‡ç½®è¾“å…¥æ¡†å†…å®¹.
 	 */
 	public void resetInputText() 
 	{
@@ -189,7 +189,7 @@ public class DefaultInputPanel extends JPanel
 	}
 	
 	/**
-	 * »ñÈ¡ÊäÈë¿òµÄÄÚÈİ.
+	 * è·å–è¾“å…¥æ¡†çš„å†…å®¹.
 	 * @return
 	 */
 	public String getInputValue() 
@@ -231,23 +231,23 @@ public class DefaultInputPanel extends JPanel
 		
 		Graphics2D g2 = (Graphics2D)g;
 		
-		// ÉèÖÃ×ÅÉ«Î¢µ÷.
+		// è®¾ç½®ç€è‰²å¾®è°ƒ.
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		
-		// »­Ò»¸öÍâ²ã¾ØĞÎ.
+		// ç”»ä¸€ä¸ªå¤–å±‚çŸ©å½¢.
 		g2.setColor(Color.white);
 		g2.fillRoundRect(0, 0, 37 + width, 13 + height, 10, 10);
 		
-		// »­Ò»¸öÄÚ²ã¾ØĞÎ,ÓÃÓÚ·ÅÖÃJText.
+		// ç”»ä¸€ä¸ªå†…å±‚çŸ©å½¢,ç”¨äºæ”¾ç½®JText.
 		g2.fillRect(0, 0, 37 + width, height);
 		
-		// ±ß¿ò.
+		// è¾¹æ¡†.
 		BasicStroke basicStroke = new BasicStroke(1.0f);
 		g2.setStroke(basicStroke);
 		
 		if(borderFlag) 
 		{
-			// Îª¸Ã¾ØĞÎÌí¼Ó±ß¿òÑÕÉ«.
+			// ä¸ºè¯¥çŸ©å½¢æ·»åŠ è¾¹æ¡†é¢œè‰².
 			g2.setColor(borderColor);
 		}
 		else 
@@ -255,7 +255,7 @@ public class DefaultInputPanel extends JPanel
 			g2.setColor(normalColor);
 		}
 		
-		// Ô²½Ç¾ØĞÎ¿ò.
+		// åœ†è§’çŸ©å½¢æ¡†.
 		g2.drawLine(0, 5, 0, 8 + height);
         g2.drawLine(36 + width, 5, 36 + width, 8 + height);
         g2.drawLine(5, 0, 32 + width, 0);

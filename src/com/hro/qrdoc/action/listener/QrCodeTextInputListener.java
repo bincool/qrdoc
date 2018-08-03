@@ -2,10 +2,10 @@
 * @FileName: QrCodeTextInputListener.java
 * @Package: com.hro.qrdoc.action.listener
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: QrCodeTextInputListener.java: ¶şÎ¬ÂëÎÄ±¾Óò¼àÌıÆ÷.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê7ÔÂ26ÈÕ ÏÂÎç4:42:46.
-* @Content: ĞÂÔö.
+* @Description: QrCodeTextInputListener.java: äºŒç»´ç æ–‡æœ¬åŸŸç›‘å¬å™¨.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´7æœˆ26æ—¥ ä¸‹åˆ4:42:46.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.action.listener;
@@ -24,35 +24,35 @@ import com.hro.qrdoc.utils.qrbox.QrBoxUtils;
 * 
 * @Description: 
 * <p>
-* ¶şÎ¬ÂëÎÄ±¾Óò¼àÌıÆ÷.
+* äºŒç»´ç æ–‡æœ¬åŸŸç›‘å¬å™¨.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê7ÔÂ26ÈÕ ÏÂÎç4:42:46.
+* @Date: 2018å¹´7æœˆ26æ—¥ ä¸‹åˆ4:42:46.
 * 
 */
 public class QrCodeTextInputListener implements DocumentListener 
 {
 	
 	/**
-	 * ¶şÎ¬ÂëÊäÈëÎÄ±¾Óò.
+	 * äºŒç»´ç è¾“å…¥æ–‡æœ¬åŸŸ.
 	 */
 	private JTextArea qrCodeText;
 	
 	/**
-	 * ¶şÎ¬Âë×°ÏäÒ³Ãæbean.
+	 * äºŒç»´ç è£…ç®±é¡µé¢bean.
 	 */
 	private QrBoxPage qrBoxPage;
 	
 	/**
-	 * ¹¹Ôìº¯Êı.
+	 * æ„é€ å‡½æ•°.
 	 * @param qrCodeText
 	 * @param qrBoxPage
 	 */
@@ -73,7 +73,7 @@ public class QrCodeTextInputListener implements DocumentListener
 			if (arr.length >= Integer.parseInt(qrBoxPage.getCountPanel().getInputValue())) 
 			{
 				qrCodeText.setEnabled(false);
-				JOptionPane.showMessageDialog(null, "ÒÑ×°Âú£¬ÇëµãÏÂÒ»Ïä", ApplicationConstant.FRAME_TITLE, JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(null, "å·²è£…æ»¡ï¼Œè¯·ç‚¹ä¸‹ä¸€ç®±", ApplicationConstant.FRAME_TITLE, JOptionPane.WARNING_MESSAGE);
 				return;
 			}
 		} 

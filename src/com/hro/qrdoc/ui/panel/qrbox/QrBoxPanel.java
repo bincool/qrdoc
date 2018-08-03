@@ -2,10 +2,10 @@
 * @FileName: QrBoxPanel.java
 * @Package: com.hro.qrdoc.ui.panel.qrbox
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: QrBoxPanel.java: ¶şÎ¬Âë×°ÏäÉ¨Ãèpanel.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê6ÔÂ7ÈÕ ÉÏÎç10:40:17.
-* @Content: ĞÂÔö.
+* @Description: QrBoxPanel.java: äºŒç»´ç è£…ç®±æ‰«æpanel.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´6æœˆ7æ—¥ ä¸Šåˆ10:40:17.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.ui.panel.qrbox;
@@ -31,85 +31,85 @@ import com.hro.qrdoc.ui.panel.base.DefaultInputPanel;
 * 
 * @Description: 
 * <p>
-* ¶şÎ¬Âë×°ÏäÉ¨Ãèpanel.
+* äºŒç»´ç è£…ç®±æ‰«æpanel.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê6ÔÂ7ÈÕ ÉÏÎç10:40:17.
+* @Date: 2018å¹´6æœˆ7æ—¥ ä¸Šåˆ10:40:17.
 * 
 */
 public class QrBoxPanel extends JPanel 
 {
 	
 	/**
-	 * ĞòÁĞ°æ±¾ºÅ.
+	 * åºåˆ—ç‰ˆæœ¬å·.
 	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**
-	 * ¼ÆÊıÊäÈë¿òÌáÊ¾±êÇ©.
+	 * è®¡æ•°è¾“å…¥æ¡†æç¤ºæ ‡ç­¾.
 	 */
 	private JLabel countLabel = new JLabel(ApplicationConstant.LABEL_TITLE_COUNT);
 	
 	/**
-	 * ¼ÆÊıÊäÈë¿ò.
+	 * è®¡æ•°è¾“å…¥æ¡†.
 	 */
 	private DefaultInputPanel countPanel = new DefaultInputPanel(Color.LIGHT_GRAY, new Color(56, 172, 239));
 	
 	/**
-	 * ¶©µ¥±àºÅÊäÈë¿òÌáÊ¾±êÇ©.
+	 * è®¢å•ç¼–å·è¾“å…¥æ¡†æç¤ºæ ‡ç­¾.
 	 */
 	private JLabel orderNumLabel = new JLabel(ApplicationConstant.LABEL_TITLE_ORDERNUM);
 	
 	/**
-	 * ¶©µ¥±àºÅÊäÈë¿ò.
+	 * è®¢å•ç¼–å·è¾“å…¥æ¡†.
 	 */
 	private DefaultInputPanel orderNumPanel = new DefaultInputPanel(Color.LIGHT_GRAY, new Color(56, 172, 239));
 	
 	/**
-	 * ´óÏäÌõÂëÊäÈë¿ò.
+	 * å¤§ç®±æ¡ç è¾“å…¥æ¡†.
 	 */
 	private JLabel bigBoxCodeLabel = new JLabel(ApplicationConstant.LABEL_TITLE_BIGBOXCODE);
 	
 	/**
-	 * ´óÏäÌõÂëÊäÈë¿òÌáÊ¾±êÇ©.
+	 * å¤§ç®±æ¡ç è¾“å…¥æ¡†æç¤ºæ ‡ç­¾.
 	 */
 	private DefaultInputPanel bigBoxCodePanel = new DefaultInputPanel(Color.LIGHT_GRAY, new Color(56, 172, 239));
 	
 	/**
-	 * ×°Ïä¶şÎ¬ÂëÎÄ±¾ÓòÌáÊ¾±êÇ©.
+	 * è£…ç®±äºŒç»´ç æ–‡æœ¬åŸŸæç¤ºæ ‡ç­¾.
 	 */
 	private JLabel qrCodeTextLabel = new JLabel(ApplicationConstant.LABEL_TITLE_QRCODETEXT);
 	
 	/**
-	 * ×°Ïä¶şÎ¬ÂëÎÄ±¾Óò.
+	 * è£…ç®±äºŒç»´ç æ–‡æœ¬åŸŸ.
 	 */
 	private JTextArea qrCodeText = new JTextArea();
 	
 	/**
-	 * ¶şÎ¬Âë×°ÏäÒ³Ãæbean.
+	 * äºŒç»´ç è£…ç®±é¡µé¢bean.
 	 */
 	private QrBoxPage qrBoxPage = new QrBoxPage();
 	
 	/**
-	 * ÏÂÒ»Ïä°´Å¥.
+	 * ä¸‹ä¸€ç®±æŒ‰é’®.
 	 */
 	private JButton nextBtn = new JButton(ApplicationConstant.BUTTON_TITLE_NEXTBTN);
 	
 	/**
-	 * ½áÊø°´Å¥.
+	 * ç»“æŸæŒ‰é’®.
 	 */
 	private JButton finishBtn = new JButton(ApplicationConstant.BUTTON_TITLE_FINISHBTN);
 	
 	/**
-	 * ÎŞ²Î¹¹Ôìº¯Êı.
+	 * æ— å‚æ„é€ å‡½æ•°.
 	 */
 	public QrBoxPanel() 
 	{
@@ -118,7 +118,7 @@ public class QrBoxPanel extends JPanel
 	}
 	
 	/**
-	 * »ñÈ¡countPanel.
+	 * è·å–countPanel.
 	 * @return
 	 *     countPanel.
 	 */
@@ -128,7 +128,7 @@ public class QrBoxPanel extends JPanel
 	}
 	
 	/**
-	 * »ñÈ¡orderNumPanel.
+	 * è·å–orderNumPanel.
 	 * @return
 	 *     orderNumPanel.
 	 */
@@ -138,7 +138,7 @@ public class QrBoxPanel extends JPanel
 	}
 	
 	/**
-	 * »ñÈ¡bigBoxCodePanel.
+	 * è·å–bigBoxCodePanel.
 	 * @return
 	 *     bigBoxCodePanel.
 	 */
@@ -148,7 +148,7 @@ public class QrBoxPanel extends JPanel
 	}
 	
 	/**
-	 * »ñÈ¡qrCodeText.
+	 * è·å–qrCodeText.
 	 * @return
 	 *     qrCodeText.
 	 */
@@ -158,65 +158,65 @@ public class QrBoxPanel extends JPanel
 	}
 	
 	/**
-	 * ³õÊ¼»¯¶şÎ¬Âë×°Ïäpanel.
+	 * åˆå§‹åŒ–äºŒç»´ç è£…ç®±panel.
 	 */
 	private void initLayout() 
 	{
 		this.setLayout(null);
 		
-		// ¼ÆÊıÊäÈë¿ò.
+		// è®¡æ•°è¾“å…¥æ¡†.
 		countLabel.setBounds(25, 20, 70, 35);
 		countPanel.setBounds(80, 20, 300, 35);
 		this.add(countLabel);
 		this.add(countPanel);
 		
-		// ¶©µ¥ºÅÊäÈë¿ò.
+		// è®¢å•å·è¾“å…¥æ¡†.
 		orderNumLabel.setBounds(25, 60, 70, 35);
 		orderNumPanel.setBounds(80, 60, 300, 35);
 		this.add(orderNumLabel);
 		this.add(orderNumPanel);
 		
-		// ´óÏäÂëÊäÈë¿ò.
+		// å¤§ç®±ç è¾“å…¥æ¡†.
 		bigBoxCodeLabel.setBounds(25, 100, 70, 35);
 		bigBoxCodePanel.setBounds(80, 100, 300, 35);
 		this.add(bigBoxCodeLabel);
 		this.add(bigBoxCodePanel);
 		
-		// ¶şÎ¬ÂëÎÄ±¾Óò.
+		// äºŒç»´ç æ–‡æœ¬åŸŸ.
 		qrCodeTextLabel.setBounds(25, 140, 745, 30);
 		JScrollPane jsp = new JScrollPane(qrCodeText);
 		jsp.setBounds(25, 180, 745, 330);
 		this.add(qrCodeTextLabel);
 		this.add(jsp);
 		
-		// ÏÂÒ»Ïä°´Å¥.
+		// ä¸‹ä¸€ç®±æŒ‰é’®.
 		nextBtn.setBounds(300, 525, 80, 30);
 		this.add(nextBtn);
 		
-		// ½áÊø°´Å¥.
+		// ç»“æŸæŒ‰é’®.
 		finishBtn.setBounds(390, 525, 80, 30);
 		this.add(finishBtn);
 	}
 
 	/**
-	 * ³õÊ¼»¯¶şÎ¬Âë×°ÏäÊÂ¼ş°ó¶¨.
+	 * åˆå§‹åŒ–äºŒç»´ç è£…ç®±äº‹ä»¶ç»‘å®š.
 	 */
 	protected void initAction() 
 	{
-		// ³õÊ¼»¯Ò³Ãæ¶ÔÏóÊı¾İ.
+		// åˆå§‹åŒ–é¡µé¢å¯¹è±¡æ•°æ®.
 		qrBoxPage.setCountPanel(countPanel);
 		qrBoxPage.setOrderNumPanel(orderNumPanel);
 		qrBoxPage.setBigBoxCodePanel(bigBoxCodePanel);
 		qrBoxPage.setQrCodeTextLabel(qrCodeTextLabel);
 		qrBoxPage.setQrCodeText(qrCodeText);
 		
-		// ³õÊ¼»¯È«¾Ö±äÁ¿Êı¾İ.
+		// åˆå§‹åŒ–å…¨å±€å˜é‡æ•°æ®.
 		qrBoxPage.initQrBoxPage();
 		
-		// ÏÂÒ»Ïä°´Å¥.
+		// ä¸‹ä¸€ç®±æŒ‰é’®.
 		nextBtn.addActionListener(new NextBtnAction(qrBoxPage));
 		
-		// ½áÊø°´Å¥.
+		// ç»“æŸæŒ‰é’®.
 		finishBtn.addActionListener(new FinishBtnAction(qrBoxPage));
 		
 		qrCodeText.getDocument().addDocumentListener(new QrCodeTextInputListener(qrCodeText, qrBoxPage));

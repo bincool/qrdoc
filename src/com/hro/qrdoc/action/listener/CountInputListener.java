@@ -2,10 +2,10 @@
 * @FileName: CountInputListener.java
 * @Package: com.hro.qrdoc.action.listener
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: CountInputListener.java: Ã¿Ïä¸öÊıÎÄ±¾¼àÌıÆ÷.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê7ÔÂ26ÈÕ ÏÂÎç4:42:46.
-* @Content: ĞÂÔö.
+* @Description: CountInputListener.java: æ¯ç®±ä¸ªæ•°æ–‡æœ¬ç›‘å¬å™¨.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´7æœˆ26æ—¥ ä¸‹åˆ4:42:46.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.action.listener;
@@ -23,35 +23,35 @@ import io.github.bincool.utils.commons.StringUtils;
 * 
 * @Description: 
 * <p>
-* Ã¿Ïä¸öÊıÎÄ±¾¼àÌıÆ÷.
+* æ¯ç®±ä¸ªæ•°æ–‡æœ¬ç›‘å¬å™¨.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê7ÔÂ26ÈÕ ÏÂÎç4:42:46.
+* @Date: 2018å¹´7æœˆ26æ—¥ ä¸‹åˆ4:42:46.
 * 
 */
 public class CountInputListener implements DocumentListener 
 {
 	
 	/**
-	 * Ã¿Ïä¸öÊı×é¼ş.
+	 * æ¯ç®±ä¸ªæ•°ç»„ä»¶.
 	 */
 	private DefaultInputPanel countPanel;
 	
 	/**
-	 * ¶şÎ¬ÂëÊäÈëÎÄ±¾Óò.
+	 * äºŒç»´ç è¾“å…¥æ–‡æœ¬åŸŸ.
 	 */
 	private JTextArea qrCodeText;
 	
 	/**
-	 * ¹¹Ôìº¯Êı.
+	 * æ„é€ å‡½æ•°.
 	 * @param countPanel
 	 * @param qrCodeText
 	 */
@@ -80,7 +80,7 @@ public class CountInputListener implements DocumentListener
     }
     
     /**
-     * ÉèÖÃqrCodeTextµÄenabledÊôĞÔ.
+     * è®¾ç½®qrCodeTextçš„enabledå±æ€§.
      */
     private void setQrCodeTextEnabled() 
     {

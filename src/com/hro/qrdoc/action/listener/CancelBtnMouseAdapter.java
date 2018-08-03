@@ -2,10 +2,10 @@
 * @FileName: CancelBtnMouseAdapter.java
 * @Package: com.hro.qrdoc.action.listener
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: CancelBtnMouseAdapter.java: È¡ÏûÖØÖÃ°´Å¥Êó±êÊÂ¼ş.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê6ÔÂ7ÈÕ ÏÂÎç2:42:16.
-* @Content: ĞÂÔö.
+* @Description: CancelBtnMouseAdapter.java: å–æ¶ˆé‡ç½®æŒ‰é’®é¼ æ ‡äº‹ä»¶.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ2:42:16.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.action.listener;
@@ -24,40 +24,40 @@ import com.hro.qrdoc.constant.ApplicationConstant;
 * 
 * @Description: 
 * <p>
-* È¡ÏûÖØÖÃ°´Å¥Êó±êÊÂ¼ş.
+* å–æ¶ˆé‡ç½®æŒ‰é’®é¼ æ ‡äº‹ä»¶.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê6ÔÂ7ÈÕ ÏÂÎç2:42:16.
+* @Date: 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ2:42:16.
 * 
 */
 public class CancelBtnMouseAdapter extends MouseAdapter 
 {
 	
 	/**
-	 * ÊäÈë¿òpanel.
+	 * è¾“å…¥æ¡†panel.
 	 */
 	private JButton cancelBtn;
 	
 	/**
-	 * Ä¬ÈÏÍ¼±ê.
+	 * é»˜è®¤å›¾æ ‡.
 	 */
 	private ImageIcon defaultIcon = new ImageIcon(Toolkit.getDefaultToolkit().getImage(ApplicationConstant.FRAME_CANCEL_HIDE_PATH));
 	
 	/**
-	 * È¡ÏûÍ¼±ê.
+	 * å–æ¶ˆå›¾æ ‡.
 	 */
 	private ImageIcon cacelIcon = new ImageIcon(Toolkit.getDefaultToolkit().getImage(ApplicationConstant.FRAME_CANCEL_SHOW_PATH));
 	
 	/**
-	 * ÓĞ²Î¹¹Ôìº¯Êı.
+	 * æœ‰å‚æ„é€ å‡½æ•°.
 	 * @param cancelBtn
 	 */
 	public CancelBtnMouseAdapter(JButton cancelBtn) 

@@ -2,10 +2,10 @@
 * @FileName: ApplicationConstant.java
 * @Package: xyz.wchy.constant
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: ApplicationConstant.java: ¼ÇÊÂ±¾³£Á¿-¿ÉÅäÖÃ.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê1ÔÂ31ÈÕ ÉÏÎç16:38:40.
-* @Content: ĞÂÔö.
+* @Description: ApplicationConstant.java: è®°äº‹æœ¬å¸¸é‡-å¯é…ç½®.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´1æœˆ31æ—¥ ä¸Šåˆ16:38:40.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.constant;
@@ -19,105 +19,105 @@ import com.hro.qrdoc.utils.ApplicationConfigHelper;
 * 
 * @Description: 
 * <p>
-* ¼ÇÊÂ±¾³£Á¿-¿ÉÔÚapplication.propertiesÖĞÅäÖÃÆä³£Á¿¾ßÌåÖµ.
+* è®°äº‹æœ¬å¸¸é‡-å¯åœ¨application.propertiesä¸­é…ç½®å…¶å¸¸é‡å…·ä½“å€¼.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê1ÔÂ31ÈÕ ÉÏÎç16:38:40.
+* @Date: 2018å¹´1æœˆ31æ—¥ ä¸Šåˆ16:38:40.
 * 
 */
 public interface ApplicationConstant 
 {
 	
 	/**
-	 * ÏµÍ³»»ĞĞ·û.
+	 * ç³»ç»Ÿæ¢è¡Œç¬¦.
 	 */
 	String LINE_SEPARATOR = System.getProperty("line.separator");
 	
 	/**
-	 * Ó¦ÓÃÅäÖÃ.
+	 * åº”ç”¨é…ç½®.
 	 */
 	Map<String, String> APP_CONFIGS = ApplicationConfigHelper.getInstance().getPropMap();
 	
 	/**
-	 * Frame±êÌâ.
+	 * Frameæ ‡é¢˜.
 	 */
 	String FRAME_TITLE = APP_CONFIGS.get("frame.title");
 	
 	/**
-	 * logoÍ¼±êÂ·¾¶.
+	 * logoå›¾æ ‡è·¯å¾„.
 	 */
 	String FRAME_ICON_PATH = APP_CONFIGS.get("frame.icon.path");
 	
 	/**
-	 * Í¼±êÂ·¾¶£ºÈ¡ÏûÏÔÊ¾Í¼±êÂ·¾¶.
+	 * å›¾æ ‡è·¯å¾„ï¼šå–æ¶ˆæ˜¾ç¤ºå›¾æ ‡è·¯å¾„.
 	 */
 	String FRAME_CANCEL_SHOW_PATH = APP_CONFIGS.get("image.cancel.show.path");
 	
 	/**
-	 * Í¼±êÂ·¾¶£ºÈ¡ÏûÒş²ØÍ¼±êÂ·¾¶.
+	 * å›¾æ ‡è·¯å¾„ï¼šå–æ¶ˆéšè—å›¾æ ‡è·¯å¾„.
 	 */
 	String FRAME_CANCEL_HIDE_PATH = APP_CONFIGS.get("image.cancel.hide.path");
 	
 	/**
-	 * label±êÌâ£ºÃ¿Ïä¸öÊı.
+	 * labelæ ‡é¢˜ï¼šæ¯ç®±ä¸ªæ•°.
 	 */
 	String LABEL_TITLE_COUNT = APP_CONFIGS.get("label.title.count");
 	
 	/**
-	 * label±êÌâ£º¶©µ¥±àºÅ.
+	 * labelæ ‡é¢˜ï¼šè®¢å•ç¼–å·.
 	 */
 	String LABEL_TITLE_ORDERNUM = APP_CONFIGS.get("label.title.ordernum");
 	
 	/**
-	 * label±êÌâ£º´óÏäÌõÂë.
+	 * labelæ ‡é¢˜ï¼šå¤§ç®±æ¡ç .
 	 */
 	String LABEL_TITLE_BIGBOXCODE = APP_CONFIGS.get("label.title.bigboxcode");
 	
 	/**
-	 * label±êÌâ£º×°Ïä¶şÎ¬Âë£ºÒÑ×°Ïä {0} Ïä {0} ¸ö.
+	 * labelæ ‡é¢˜ï¼šè£…ç®±äºŒç»´ç ï¼šå·²è£…ç®± {0} ç®± {0} ä¸ª.
 	 */
 	String LABEL_TITLE_QRCODETEXT = APP_CONFIGS.get("label.title.qrcodetext");
 	
 	/**
-	 * button±êÌâ£ºÏÂÒ»Ïä.
+	 * buttonæ ‡é¢˜ï¼šä¸‹ä¸€ç®±.
 	 */
 	String BUTTON_TITLE_NEXTBTN = APP_CONFIGS.get("button.title.nextbtn");
 	
 	/**
-	 * button±êÌâ£º½áÊø.
+	 * buttonæ ‡é¢˜ï¼šç»“æŸ.
 	 */
 	String BUTTON_TITLE_FINISHBTN = APP_CONFIGS.get("button.title.finishbtn");
 	
 	/**
-	 * ¾¯¸æÌáÊ¾£ºaction¹¦ÄÜÎ´¿ª·Å¾¯¸æ.
+	 * è­¦å‘Šæç¤ºï¼šactionåŠŸèƒ½æœªå¼€æ”¾è­¦å‘Š.
 	 */
 	String WARN_ACTION_FUN_NOTOPEN = APP_CONFIGS.get("warn.action.fun.notopen");
 	
 	/**
-	 * ¶©µ¥ºÅÕıÔòÆ¥Åäkey.
+	 * è®¢å•å·æ­£åˆ™åŒ¹é…key.
 	 */
 	String QRDOC_FILE_REGEX_KEY_ORDERNUM = APP_CONFIGS.get("qrdoc.file.regex.key.ordernum");
 	
 	/**
-	 * ´óÏäÂëÕıÔòÆ¥Åäkey.
+	 * å¤§ç®±ç æ­£åˆ™åŒ¹é…key.
 	 */
 	String QRDOC_FILE_REGEX_KEY_BIGBOXCODE = APP_CONFIGS.get("qrdoc.file.regex.key.bigboxcode");
 	
 	/**
-	 * ¶şÎ¬ÂëÊı¾İÕıÔòÆ¥Åäkey.
+	 * äºŒç»´ç æ•°æ®æ­£åˆ™åŒ¹é…key.
 	 */
 	String QRDOC_FILE_REGEX_KEY_QRCODETEXT = APP_CONFIGS.get("qrdoc.file.regex.key.qrcodetext");
 	
 	/**
-	 * ×°Ïä¶şÎ¬Âë´æ·Å¸ùÂ·¾¶.
+	 * è£…ç®±äºŒç»´ç å­˜æ”¾æ ¹è·¯å¾„.
 	 */
 	String QRDOC_FILE_ROOT_PATH = APP_CONFIGS.get("qrdoc.file.root.path");
 	

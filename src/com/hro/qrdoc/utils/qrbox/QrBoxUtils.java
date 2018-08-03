@@ -2,10 +2,10 @@
 * @FileName: QrBoxUtils.java
 * @Package: com.hro.qrdoc.utils.qrbox
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: QrBoxUtils.java: ¶şÎ¬Âë×°ÏäÉ¨Ãè¹¤¾ßÀà.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê6ÔÂ7ÈÕ ÏÂÎç5:40:10.
-* @Content: ĞÂÔö.
+* @Description: QrBoxUtils.java: äºŒç»´ç è£…ç®±æ‰«æå·¥å…·ç±».
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ5:40:10.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.utils.qrbox;
@@ -29,56 +29,56 @@ import io.github.bincool.utils.commons.StringUtils;
 * 
 * @Description: 
 * <p>
-* ¶şÎ¬Âë×°ÏäÉ¨Ãè¹¤¾ßÀà.
+* äºŒç»´ç è£…ç®±æ‰«æå·¥å…·ç±».
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê6ÔÂ7ÈÕ ÏÂÎç5:40:10.
+* @Date: 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ5:40:10.
 * 
 */
 public class QrBoxUtils 
 {
 	
 	/**
-	 * ÈÕÖ¾¶ÔÏó.
+	 * æ—¥å¿—å¯¹è±¡.
 	 */
 	private static final Logger LOGGER = Logger.getLogger(QrBoxUtils.class);
 	
 	/**
-	 * Ğ£Ñé²ÎÊı.
+	 * æ ¡éªŒå‚æ•°.
 	 * @param qrcodeBoxBean
 	 * @return
 	 */
 	public static String verifyQrBoxPageParams(QrcodeBoxBean qrcodeBoxBean) 
 	{
 		
-		// Ğ£ÑéÃ¿Ïä¸öÊı.
+		// æ ¡éªŒæ¯ç®±ä¸ªæ•°.
 		if (StringUtils.isEmpty(qrcodeBoxBean.getCount())) 
 		{
 			return SysStatusAndType.QBPParamsVerify.ERR_COUNT;
 		}
 		
-		// Ğ£Ñé¶©µ¥±àºÅ.
+		// æ ¡éªŒè®¢å•ç¼–å·.
 		if (StringUtils.isEmpty(qrcodeBoxBean.getOrderNum())) 
 		{
 			
 			return SysStatusAndType.QBPParamsVerify.ERR_ORDERNUM;
 		}
 		
-		// Ğ£Ñé´óÏäÌõÂë.
+		// æ ¡éªŒå¤§ç®±æ¡ç .
 		if (StringUtils.isEmpty(qrcodeBoxBean.getBigBoxCode())) 
 		{
 			return SysStatusAndType.QBPParamsVerify.ERR_BIGBOXCODE;
 		}
 		
-		// Ğ£Ñé×°Ïä¶şÎ¬Âë.
+		// æ ¡éªŒè£…ç®±äºŒç»´ç .
 		if (StringUtils.isEmpty(qrcodeBoxBean.getQrCodeText())) 
 		{
 			return SysStatusAndType.QBPParamsVerify.ERR_QRCODETEXT;
@@ -88,36 +88,36 @@ public class QrBoxUtils
 	}
 	
 	/**
-	 * ±£´æÊı¾İ.
+	 * ä¿å­˜æ•°æ®.
 	 * @param srcPathname
-	 * 		ÎÄ¼ş´æ·ÅÂ·¾¶.
+	 * 		æ–‡ä»¶å­˜æ”¾è·¯å¾„.
 	 * @param qrcodeBoxBean
-	 * 		Ğ´ÈëÎÄ¼şµÄÄÚÈİÊµÌå.
+	 * 		å†™å…¥æ–‡ä»¶çš„å†…å®¹å®ä½“.
 	 * @throws IOException
 	 */
 	public static void saveData(String srcPathname, QrcodeBoxBean qrcodeBoxBean) throws IOException
 	{
 		String context = "";
 		
-		// ¼ÇÂ¼¶©µ¥ºÅ.
+		// è®°å½•è®¢å•å·.
 		context += ApplicationConstant.QRDOC_FILE_REGEX_KEY_ORDERNUM + ApplicationConstant.LINE_SEPARATOR;
 		context += qrcodeBoxBean.getOrderNum() + ApplicationConstant.LINE_SEPARATOR;
 		
-		// ¼ÇÂ¼´óÏäÂë.
+		// è®°å½•å¤§ç®±ç .
 		context += ApplicationConstant.QRDOC_FILE_REGEX_KEY_BIGBOXCODE + ApplicationConstant.LINE_SEPARATOR;
 		context += qrcodeBoxBean.getBigBoxCode() + ApplicationConstant.LINE_SEPARATOR;
 		
-		// ¼ÇÂ¼¶şÎ¬ÂëÊı¾İ.
+		// è®°å½•äºŒç»´ç æ•°æ®.
 		context += ApplicationConstant.QRDOC_FILE_REGEX_KEY_QRCODETEXT + ApplicationConstant.LINE_SEPARATOR;
 		context += qrcodeBoxBean.getQrCodeText() + ApplicationConstant.LINE_SEPARATOR;
 		
-		// Ğ´ÈëÎÄ¼ş.
+		// å†™å…¥æ–‡ä»¶.
 		LOGGER.info(context);
 		FileHelper.writeStringToFile(srcPathname, context, true);
 	}
 	
 	/**
-	 * ºÏ²¢×ÓÎÄ¼ş²¢É¾³ı×ÓÎÄ¼ş.
+	 * åˆå¹¶å­æ–‡ä»¶å¹¶åˆ é™¤å­æ–‡ä»¶.
 	 * @param qrBoxPage
 	 * @throws IOException
 	 */
@@ -135,7 +135,7 @@ public class QrBoxUtils
 	}
 	
 	/**
-     * È¥³ı×Ö·û´®ÖĞÍ·²¿ºÍÎ²²¿Ëù°üº¬µÄ¿Õ¸ñ£¨°üÀ¨:¿Õ¸ñ(È«½Ç£¬°ë½Ç)¡¢ÖÆ±í·û¡¢»»Ò³·ûµÈ£©
+     * å»é™¤å­—ç¬¦ä¸²ä¸­å¤´éƒ¨å’Œå°¾éƒ¨æ‰€åŒ…å«çš„ç©ºæ ¼ï¼ˆåŒ…æ‹¬:ç©ºæ ¼(å…¨è§’ï¼ŒåŠè§’)ã€åˆ¶è¡¨ç¬¦ã€æ¢é¡µç¬¦ç­‰ï¼‰
      * @param s
      * @return
      */
@@ -144,7 +144,7 @@ public class QrBoxUtils
         String result = "";
         if(StringUtils.isNotEmpty(str)) 
         {
-            result = str.replaceAll("^[¡¡*| *| *|//s*]*", "").replaceAll("[¡¡*| *| *|//s*]*$", "");
+            result = str.replaceAll("^[ã€€*| *| *|//s*]*", "").replaceAll("[ã€€*| *| *|//s*]*$", "");
         }
         return result;
     }

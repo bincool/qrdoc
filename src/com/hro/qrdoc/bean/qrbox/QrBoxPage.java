@@ -2,10 +2,10 @@
 * @FileName: QrBoxPage.java
 * @Package: com.hro.qrdoc.bean.qrbox
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: QrBoxPage.java: ¶şÎ¬Âë×°ÏäÒ³Ãæbean.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê6ÔÂ7ÈÕ ÏÂÎç4:44:30.
-* @Content: ĞÂÔö.
+* @Description: QrBoxPage.java: äºŒç»´ç è£…ç®±é¡µé¢bean.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ4:44:30.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.bean.qrbox;
@@ -29,70 +29,70 @@ import io.github.bincool.utils.MakeRandCode;
 * 
 * @Description: 
 * <p>
-* ¶şÎ¬Âë×°ÏäÒ³Ãæbean.
+* äºŒç»´ç è£…ç®±é¡µé¢bean.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö£º¶şÎ¬Âë×°ÏäÒ³Ãæbean£¬°üº¬ÓÃ»§ÊäÈëµÄbeanºÍºóÌ¨ËùĞèµÄbean.
+* è¯¦ç»†æè¿°ï¼šäºŒç»´ç è£…ç®±é¡µé¢beanï¼ŒåŒ…å«ç”¨æˆ·è¾“å…¥çš„beanå’Œåå°æ‰€éœ€çš„bean.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê6ÔÂ7ÈÕ ÏÂÎç4:44:30.
+* @Date: 2018å¹´6æœˆ7æ—¥ ä¸‹åˆ4:44:30.
 * 
 */
 public class QrBoxPage implements Serializable
 {
 	
 	/**
-	 * ĞòÁĞ°æ±¾ºÅ.
+	 * åºåˆ—ç‰ˆæœ¬å·.
 	 */
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * ¼ÆÊıÊäÈë¿ò.
+	 * è®¡æ•°è¾“å…¥æ¡†.
 	 */
 	private DefaultInputPanel countPanel;
 	
 	/**
-	 * ¶©µ¥±àºÅÊäÈë¿ò.
+	 * è®¢å•ç¼–å·è¾“å…¥æ¡†.
 	 */
 	private DefaultInputPanel orderNumPanel;
 	
 	/**
-	 * ´óÏäÌõÂëÊäÈë¿òÌáÊ¾±êÇ©.
+	 * å¤§ç®±æ¡ç è¾“å…¥æ¡†æç¤ºæ ‡ç­¾.
 	 */
 	private DefaultInputPanel bigBoxCodePanel;
 	
 	/**
-	 * ×°Ïä¶şÎ¬ÂëÎÄ±¾ÓòÌáÊ¾±êÇ©.
+	 * è£…ç®±äºŒç»´ç æ–‡æœ¬åŸŸæç¤ºæ ‡ç­¾.
 	 */
 	private JLabel qrCodeTextLabel;
 	
 	/**
-	 * ×°Ïä¶şÎ¬ÂëÎÄ±¾Óò.
+	 * è£…ç®±äºŒç»´ç æ–‡æœ¬åŸŸ.
 	 */
 	private JTextArea qrCodeText;
 	
 	/**
-	 * ×°Ïä¶şÎ¬ÂëÎÄ¼şÃû,µã»÷Íê³ÉÊ±Ê¹ÓÃ.
+	 * è£…ç®±äºŒç»´ç æ–‡ä»¶å,ç‚¹å‡»å®Œæˆæ—¶ä½¿ç”¨.
 	 */
 	private String fileName;
 	
 	/**
-	 * ¶şÎ¬ÂëÉ¨Ãè×°Ïä¼ÆÊı»º´æ.
+	 * äºŒç»´ç æ‰«æè£…ç®±è®¡æ•°ç¼“å­˜.
 	 */
 	private Map<String, Integer> boxDataBuffer = new HashMap<String, Integer>();
 	
 	/**
-	 * ¶şÎ¬Âë×°Ïäbean.
+	 * äºŒç»´ç è£…ç®±bean.
 	 */
 	private QrcodeBoxBean qrcodeBoxBean = new QrcodeBoxBean();
 
 	/**
-	 * »ñÈ¡countPanel.
+	 * è·å–countPanel.
 	 * @return
 	 *     countPanel.
 	 */
@@ -102,7 +102,7 @@ public class QrBoxPage implements Serializable
 	}
 
 	/**
-	 * ÉèÖÃcountPanel.
+	 * è®¾ç½®countPanel.
 	 * @param
 	 *     countPanel.
 	 */
@@ -112,7 +112,7 @@ public class QrBoxPage implements Serializable
 	}
 
 	/**
-	 * »ñÈ¡orderNumPanel.
+	 * è·å–orderNumPanel.
 	 * @return
 	 *     orderNumPanel.
 	 */
@@ -122,7 +122,7 @@ public class QrBoxPage implements Serializable
 	}
 
 	/**
-	 * ÉèÖÃorderNumPanel.
+	 * è®¾ç½®orderNumPanel.
 	 * @param
 	 *     orderNumPanel.
 	 */
@@ -132,7 +132,7 @@ public class QrBoxPage implements Serializable
 	}
 
 	/**
-	 * »ñÈ¡bigBoxCodePanel.
+	 * è·å–bigBoxCodePanel.
 	 * @return
 	 *     bigBoxCodePanel.
 	 */
@@ -142,7 +142,7 @@ public class QrBoxPage implements Serializable
 	}
 
 	/**
-	 * ÉèÖÃbigBoxCodePanel.
+	 * è®¾ç½®bigBoxCodePanel.
 	 * @param
 	 *     bigBoxCodePanel.
 	 */
@@ -152,7 +152,7 @@ public class QrBoxPage implements Serializable
 	}
 	
 	/**
-	 * »ñÈ¡qrCodeTextLabel.
+	 * è·å–qrCodeTextLabel.
 	 * @return
 	 *     qrCodeTextLabel.
 	 */
@@ -162,7 +162,7 @@ public class QrBoxPage implements Serializable
 	}
 	
 	/**
-	 * ÉèÖÃqrCodeTextLabel.
+	 * è®¾ç½®qrCodeTextLabel.
 	 * @param
 	 *     qrCodeTextLabel.
 	 */
@@ -172,7 +172,7 @@ public class QrBoxPage implements Serializable
 	}
 
 	/**
-	 * »ñÈ¡qrCodeText.
+	 * è·å–qrCodeText.
 	 * @return
 	 *     qrCodeText.
 	 */
@@ -182,7 +182,7 @@ public class QrBoxPage implements Serializable
 	}
 
 	/**
-	 * ÉèÖÃqrCodeText.
+	 * è®¾ç½®qrCodeText.
 	 * @param
 	 *     qrCodeText.
 	 */
@@ -192,7 +192,7 @@ public class QrBoxPage implements Serializable
 	}
 
 	/**
-	 * »ñÈ¡qrcodeBoxBean.
+	 * è·å–qrcodeBoxBean.
 	 * @return
 	 *     qrcodeBoxBean.
 	 */
@@ -202,7 +202,7 @@ public class QrBoxPage implements Serializable
 	}
 
 	/**
-	 * ÉèÖÃqrcodeBoxBean.
+	 * è®¾ç½®qrcodeBoxBean.
 	 * @param
 	 *     qrcodeBoxBean.
 	 */
@@ -212,7 +212,7 @@ public class QrBoxPage implements Serializable
 	}
 	
 	/**
-	 * »ñÈ¡fileName.
+	 * è·å–fileName.
 	 * @return
 	 * 		fileName.
 	 */
@@ -222,7 +222,7 @@ public class QrBoxPage implements Serializable
 	}
 
 	/**
-	 * ÉèÖÃfileName.
+	 * è®¾ç½®fileName.
 	 * @param fileName
 	 * 		fileName.
 	 */
@@ -232,7 +232,7 @@ public class QrBoxPage implements Serializable
 	}
 
 	/**
-	 * »ñÈ¡boxDataBuffer.
+	 * è·å–boxDataBuffer.
 	 * @return
 	 * 		boxDataBuffer.
 	 */
@@ -242,7 +242,7 @@ public class QrBoxPage implements Serializable
 	}
 
 	/**
-	 * ÉèÖÃboxDataBuffer.
+	 * è®¾ç½®boxDataBuffer.
 	 * @param boxDataBuffer
 	 * 		boxDataBuffer.
 	 */
@@ -273,7 +273,7 @@ public class QrBoxPage implements Serializable
 	}
 	
 	/**
-	 * Ë¢ĞÂqrcodeBoxBean¶ÔÏó£¬½«ÓÃ»§ÊäÈëµÄĞÅÏ¢Í¬²½µ½qrcodeBoxBean¶ÔÏó.
+	 * åˆ·æ–°qrcodeBoxBeanå¯¹è±¡ï¼Œå°†ç”¨æˆ·è¾“å…¥çš„ä¿¡æ¯åŒæ­¥åˆ°qrcodeBoxBeanå¯¹è±¡.
 	 */
 	public void flushQrcodeBoxBean() 
 	{
@@ -284,7 +284,7 @@ public class QrBoxPage implements Serializable
 	}
 	
 	/**
-	 * Çå³ıÒ³Ãæ´óÏäÂëÊı¾İ.
+	 * æ¸…é™¤é¡µé¢å¤§ç®±ç æ•°æ®.
 	 */
 	public void clearBoxData() 
 	{
@@ -296,7 +296,7 @@ public class QrBoxPage implements Serializable
 	}
 	
 	/**
-	 * ³õÊ¼»¯Ò³ÃæĞÅÏ¢£¬°üÀ¨È«¾Ö±äÁ¿.
+	 * åˆå§‹åŒ–é¡µé¢ä¿¡æ¯ï¼ŒåŒ…æ‹¬å…¨å±€å˜é‡.
 	 */
 	public void initQrBoxPage() 
 	{
@@ -323,7 +323,7 @@ public class QrBoxPage implements Serializable
 	}
 	
 	/**
-	 * »ñÈ¡DefaultInputPanelÖĞµÄÖµ.
+	 * è·å–DefaultInputPanelä¸­çš„å€¼.
 	 * @param inputPanel
 	 * @return
 	 */

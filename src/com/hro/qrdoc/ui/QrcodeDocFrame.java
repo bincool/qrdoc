@@ -2,10 +2,10 @@
 * @FileName: QrcodeDocFrame.java
 * @Package: com.hro.qrdoc.ui
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: QrcodeDocFrame.java: ¶şÎ¬ÂëÉ¨Ãè×°Ïä¼ÆÊıÉú³ÉÎÄµµ.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê6ÔÂ4ÈÕ ÏÂÎç12:47:25.
-* @Content: ĞÂÔö.
+* @Description: QrcodeDocFrame.java: äºŒç»´ç æ‰«æè£…ç®±è®¡æ•°ç”Ÿæˆæ–‡æ¡£.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´6æœˆ4æ—¥ ä¸‹åˆ12:47:25.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc.ui;
@@ -26,40 +26,40 @@ import com.hro.qrdoc.ui.panel.qrbox.QrBoxPanel;
 * 
 * @Description: 
 * <p>
-* ¶şÎ¬ÂëÉ¨Ãè×°Ïä¼ÆÊıÉú³ÉÎÄµµ.
+* äºŒç»´ç æ‰«æè£…ç®±è®¡æ•°ç”Ÿæˆæ–‡æ¡£.
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö£º¶şÎ¬ÂëÉ¨Ãè×°Ïä¼ÆÊıÉú³ÉÎÄµµ.
+* è¯¦ç»†æè¿°ï¼šäºŒç»´ç æ‰«æè£…ç®±è®¡æ•°ç”Ÿæˆæ–‡æ¡£.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê6ÔÂ4ÈÕ ÏÂÎç12:47:25.
+* @Date: 2018å¹´6æœˆ4æ—¥ ä¸‹åˆ12:47:25.
 * 
 */
 public class QrcodeDocFrame 
 {
 	
 	/**
-	 * ÈÕÖ¾¶ÔÏó.
+	 * æ—¥å¿—å¯¹è±¡.
 	 */
 	private static final Logger LOGGER = Logger.getLogger(QrcodeDocFrame.class);
 
 	/**
-	 * Ö÷´°Ìå.
+	 * ä¸»çª—ä½“.
 	 */
 	private JFrame frame;
 	
 	/**
-	 * ÆÁÄ»Î³¶È.
+	 * å±å¹•çº¬åº¦.
 	 */
 	private Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
 	
 	/**
-	 * ÎŞ²Î¹¹Ôìº¯Êı.
+	 * æ— å‚æ„é€ å‡½æ•°.
 	 */
 	public QrcodeDocFrame() 
 	{
@@ -69,7 +69,7 @@ public class QrcodeDocFrame
 	}
 	
 	/**
-	 * »ñÈ¡frame.
+	 * è·å–frame.
 	 * @return
 	 *     frame.
 	 */
@@ -79,7 +79,7 @@ public class QrcodeDocFrame
 	}
 
 	/**
-	 * ÉèÖÃframe.
+	 * è®¾ç½®frame.
 	 * @param
 	 *     frame.
 	 */
@@ -93,7 +93,7 @@ public class QrcodeDocFrame
 	 */
 	private void initialize() 
 	{
-		// Ö÷´°Ìå.
+		// ä¸»çª—ä½“.
 		frame = new JFrame();
 		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(ApplicationConstant.FRAME_ICON_PATH));
 		frame.setTitle(ApplicationConstant.FRAME_TITLE);

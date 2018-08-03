@@ -2,10 +2,10 @@
 * @FileName: QrcodeDoc.java
 * @Package: com.hro.qrdoc
 * @Copyright: 2018 bincool.github.io Inc. All Rights Reserved.
-* @Description: QrcodeDoc.java: ¶şÎ¬Âë×°ÏäÎÄµµÉú³É.
-* @Author wchy£¬¼¼Êõ½»Á÷(891946049).
-* @Date 2018Äê6ÔÂ1ÈÕ ÏÂÎç12:53:24.
-* @Content: ĞÂÔö.
+* @Description: QrcodeDoc.java: äºŒç»´ç è£…ç®±æ–‡æ¡£ç”Ÿæˆ.
+* @Author wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
+* @Date 2018å¹´6æœˆ1æ—¥ ä¸‹åˆ12:53:24.
+* @Content: æ–°å¢.
 * @Version: V1.0.
 */
 package com.hro.qrdoc;
@@ -21,30 +21,30 @@ import com.hro.qrdoc.runnable.QrcodeDocRunnable;
 * 
 * @Description: 
 * <p>
-* ¶şÎ¬Âë×°ÏäÎÄµµÉú³É£ºÃ¿Ïä¸öÊı£¬¶©µ¥ºÅ£¬´óÏäÂë£¬²úÆ·¶şÎ¬Âë.
+* äºŒç»´ç è£…ç®±æ–‡æ¡£ç”Ÿæˆï¼šæ¯ç®±ä¸ªæ•°ï¼Œè®¢å•å·ï¼Œå¤§ç®±ç ï¼Œäº§å“äºŒç»´ç .
 * </p>
 * <p>
-* ÏêÏ¸ÃèÊö.
+* è¯¦ç»†æè¿°.
 * </p>
 * <p>
-* Ê¾Àı´úÂë.
+* ç¤ºä¾‹ä»£ç .
 * </p>
 *
-* @Author: wchy£¬¼¼Êõ½»Á÷(891946049).
+* @Author: wchyï¼ŒæŠ€æœ¯äº¤æµ(891946049).
 * 
-* @Date: 2018Äê6ÔÂ1ÈÕ ÏÂÎç12:53:24.
+* @Date: 2018å¹´6æœˆ1æ—¥ ä¸‹åˆ12:53:24.
 * 
 */
 public class QrcodeDoc 
 {
 
 	/**
-	 * ÈÕÖ¾¶ÔÏó.
+	 * æ—¥å¿—å¯¹è±¡.
 	 */
 	private static final Logger LOGGER = Logger.getLogger(QrcodeDoc.class);
 	
 	/**
-	 * Ö÷·½·¨. Launch the application.
+	 * ä¸»æ–¹æ³•. Launch the application.
 	 */
 	public static void main(String[] args) 
 	{

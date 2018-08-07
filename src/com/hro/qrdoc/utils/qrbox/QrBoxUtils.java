@@ -14,7 +14,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.hro.qrdoc.bean.qrbox.QrBoxPage;
 import com.hro.qrdoc.bean.qrbox.QrcodeBoxBean;
@@ -49,7 +50,7 @@ public class QrBoxUtils
 	/**
 	 * 日志对象.
 	 */
-	private static final Logger LOGGER = Logger.getLogger(QrBoxUtils.class);
+	private static final Logger LOGGER = LogManager.getLogger(QrBoxUtils.class);
 	
 	/**
 	 * 校验参数.

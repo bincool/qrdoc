@@ -12,7 +12,8 @@ package com.hro.qrdoc;
 
 import java.awt.EventQueue;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.hro.qrdoc.runnable.QrcodeDocRunnable;
 
@@ -41,7 +42,7 @@ public class QrcodeDoc
 	/**
 	 * 日志对象.
 	 */
-	private static final Logger LOGGER = Logger.getLogger(QrcodeDoc.class);
+	private static final Logger LOGGER = LogManager.getLogger(QrcodeDoc.class);
 	
 	/**
 	 * 主方法. Launch the application.

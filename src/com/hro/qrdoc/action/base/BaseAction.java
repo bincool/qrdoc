@@ -15,7 +15,8 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JOptionPane;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.hro.qrdoc.constant.ApplicationConstant;
 
@@ -44,7 +45,7 @@ public class BaseAction implements ActionListener
 	/**
 	 * 日志对象.
 	 */
-	protected static final Logger LOGGER = Logger.getLogger(BaseAction.class);
+	protected static final Logger LOGGER = LogManager.getLogger(BaseAction.class);
 
 	/* (non-Javadoc)
 	 * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)

@@ -12,7 +12,8 @@ package com.hro.qrdoc.runnable;
 
 import javax.swing.UIManager;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.hro.qrdoc.ui.QrcodeDocFrame;
 
@@ -41,7 +42,7 @@ public class QrcodeDocRunnable implements Runnable
 	/**
 	 * 日志对象.
 	 */
-	private static final Logger LOGGER = Logger.getLogger(QrcodeDocRunnable.class);
+	private static final Logger LOGGER = LogManager.getLogger(QrcodeDocRunnable.class);
 
 	/* (non-Javadoc)
 	 * @see java.lang.Runnable#run()

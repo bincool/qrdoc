@@ -17,7 +17,7 @@
 	
 	<properties>
 		<!-- commons-utils版本号 -->
-		<commons-utils.version>1.0.1</commons-utils.version>
+		<commons-utils.version>1.0.2</commons-utils.version>
 	</properties>
 
 	<dependencies>

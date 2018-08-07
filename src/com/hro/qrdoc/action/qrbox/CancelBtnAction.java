@@ -14,7 +14,8 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.JTextField;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.hro.qrdoc.action.base.BaseAction;
 
@@ -43,7 +44,7 @@ public class CancelBtnAction extends BaseAction
 	/**
 	 * 日志对象.
 	 */
-	private static final Logger LOGGER = Logger.getLogger(CancelBtnAction.class);
+	private static final Logger LOGGER = LogManager.getLogger(CancelBtnAction.class);
 	
 	/**
 	 * 文本输入框.
